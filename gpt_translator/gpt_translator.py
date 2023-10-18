@@ -7,9 +7,6 @@ from gpt_translator.file_utils import read_txt
 
 temp_dir = tempfile.gettempdir()
 
-# set logging level
-logging.basicConfig(level=logging.INFO)
-
 # log to stdout
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.StreamHandler())
