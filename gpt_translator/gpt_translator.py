@@ -68,12 +68,16 @@ class GPTTranslator:
         paragraphs = file_utils.read_source_file(
             self.from_file, self.max_words_paragraph
         )
-        paragraphs_translated = file_utils.get_paragraphs(self.working_dir)
 
-        logging.info(f"Total paragraphs to translate: {len(paragraphs)}")
-        logging.info(f"Starting from paragraph index: {self.idx_begin}")
+        file_utils.save_markdown(self.working_dir, "input.md", paragraphs)
+        paragraphs_translated = file_utils.get_paragraphs(
+            self.working_dir, "output.json"
+        )
 
         position = len(paragraphs_translated)
+
+        logging.info(f"Total paragraphs to translate: {len(paragraphs)}")
+        logging.info(f"Starting from paragraph index: {position}")
 
         for idx, para in enumerate(paragraphs[position:], position):
             retry = True
@@ -94,7 +98,12 @@ class GPTTranslator:
                     self.total_tokens += tokens_used
 
                     paragraphs_translated.append(content.strip())
-                    file_utils.save_translation(self.working_dir, paragraphs_translated)
+                    file_utils.save_markdown(
+                        self.working_dir, "output.md", paragraphs_translated
+                    )
+                    file_utils.save_json(
+                        self.working_dir, "output.json", paragraphs_translated
+                    )
 
                     logger.info(f"(Total tokens used: {self.total_tokens})")
                     retry = False  # Translation successful, exit while-loop

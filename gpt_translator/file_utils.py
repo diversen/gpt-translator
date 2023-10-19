@@ -13,6 +13,9 @@ def read_source_file(filename, max_words_paragraph=0):
     # Normalize all line endings to \n
     content = content.replace("\r\n", "\n").replace("\r", "\n")
 
+    # trim all lines
+    content = "\n".join([line.strip() for line in content.split("\n")])
+
     # Transform multiple newlines into max two
     content = re.sub("\n{3,}", "\n\n", content)
 
@@ -29,23 +32,29 @@ def read_source_file(filename, max_words_paragraph=0):
     return paragraphs
 
 
-def save_translation(working_dir, paragraphs):
+def save_markdown(working_dir, filename, paragraphs):
 
     if not os.path.exists(working_dir):
         os.makedirs(working_dir)
 
-    save_file = os.path.join(working_dir, "output.txt")
+    save_file = os.path.join(working_dir, filename)
     with open(save_file, "w") as file:
         file.write("\n\n".join(paragraphs))
 
-    save_file = os.path.join(working_dir, "output.json")
+
+def save_json(working_dir, filename, paragraphs):
+
+    if not os.path.exists(working_dir):
+        os.makedirs(working_dir)
+
+    save_file = os.path.join(working_dir, filename)
     with open(save_file, "w") as file:
         json.dump(paragraphs, file, indent=4, ensure_ascii=False)
 
 
-def get_paragraphs(working_dir):
+def get_paragraphs(working_dir, filename):
 
-    json_file = os.path.join(working_dir, "output.json")
+    json_file = os.path.join(working_dir, filename)
     if not os.path.exists(json_file):
         return []
 
