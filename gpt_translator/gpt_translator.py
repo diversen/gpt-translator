@@ -3,7 +3,7 @@ import time
 import logging
 import os
 from dotenv import load_dotenv
-# from gpt_translator.gpt_translator import file_utils
+from gpt_translator import file_utils
 
 
 load_dotenv()
@@ -38,7 +38,7 @@ class GPTTranslator:
         self.temperature = temperature
         self.presence_penalty = presence_penalty
         self.top_p = top_p
-        self.max_words_paragraph = max_tokens_paragraph
+        self.max_tokens_paragraph = max_tokens_paragraph
         self.model = model
         self.total_tokens = 0
         self.failure_iterations = 1
@@ -62,7 +62,7 @@ class GPTTranslator:
 
     def translate(self):
         paragraphs = file_utils.read_source_file(
-            self.from_file, self.max_words_paragraph
+            self.from_file, self.max_tokens_paragraph
         )
 
         file_utils.save_markdown(self.working_dir, "input.md", paragraphs)

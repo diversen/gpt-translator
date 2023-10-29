@@ -1,16 +1,19 @@
 import click
 from gpt_translator.gpt_translator import GPTTranslator
+import logging
 
+# set logging level
+logging.basicConfig(level=logging.INFO)
 
 @click.group()
 def cli():
     pass
 
 @click.command()
-@click.option('--from-file', default='', help='Source file for translation.')
-@click.option('--pre-prompt', default='', help='Pre-prompt for translation.')
-@click.option('--working-dir', default='./output', help='Working directory.')
-@click.option('--idx-begin', default=0, help='Index to start from.')
+@click.option('-f', '--from-file', help='Source file for translation.', required=True)
+@click.option('-p', '--pre-prompt', help='Pre-prompt for translation.', required=True)
+@click.option('-d', '--working-dir', default='./output', help='Working directory. Default is ./output')
+@click.option('-i', '--idx-begin', default=0, help='Index to start from.')
 @click.option('--failure-sleep', default=10, help='Failure sleep time.')
 @click.option('--temperature', default=0.7, help='Temperature.')
 @click.option('--presence-penalty', default=0.1, help='Presence penalty.')

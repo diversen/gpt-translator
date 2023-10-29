@@ -1,8 +1,6 @@
 from gpt_translator.gpt_translator import GPTTranslator
 import logging
 
-exit()
-
 # set logging level
 logging.basicConfig(level=logging.INFO)
 
@@ -23,12 +21,12 @@ The text to modernize begins after the next colon: """
 
 # Initialize the GPTTranslate class and call the translate method
 gpt_translate = GPTTranslator(
-    "./example/winged-death.md",
+    "./output/winged-death.md",
     pre_prompt,
-    api_env=".env",
     working_dir="./example",
     idx_begin=0,
     model="gpt-3.5-turbo",
     max_tokens_paragraph=1024,
 )
+
 gpt_translate.translate()

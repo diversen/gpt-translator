@@ -1,9 +1,20 @@
 import re
 import os
 import json
+import tiktoken
 
 
-def read_source_file(filename, max_words_paragraph=0):
+def count_tokens(string: str) -> int:
+    """
+    Returns the number of tokens in a text string.
+    cl100k_base: gpt-4, gpt-3.5-turbo, text-embedding-ada-002
+    """
+    encoding = tiktoken.get_encoding('cl100k_base')
+    num_tokens = len(encoding.encode(string))
+    return num_tokens
+
+
+def read_source_file(filename, max_tokens_paragraph):
     """
     Read txt and markdown files and return a list of paragraphs as a list of strings.
     """
@@ -23,8 +34,7 @@ def read_source_file(filename, max_words_paragraph=0):
     paragraphs = content.split("\n\n")
 
     # Expand paragraphs
-    if max_words_paragraph:
-        paragraphs = _expand_paragraphs(paragraphs, max_words_paragraph)
+    paragraphs = _expand_paragraphs(paragraphs, max_tokens_paragraph)
 
     # Trim
     paragraphs = [para.strip() for para in paragraphs if para.strip()]
@@ -33,7 +43,6 @@ def read_source_file(filename, max_words_paragraph=0):
 
 
 def save_markdown(working_dir, filename, paragraphs):
-
     if not os.path.exists(working_dir):
         os.makedirs(working_dir)
 
@@ -43,7 +52,6 @@ def save_markdown(working_dir, filename, paragraphs):
 
 
 def save_json(working_dir, filename, paragraphs):
-
     if not os.path.exists(working_dir):
         os.makedirs(working_dir)
 
@@ -53,7 +61,6 @@ def save_json(working_dir, filename, paragraphs):
 
 
 def get_paragraphs(working_dir, filename):
-
     json_file = os.path.join(working_dir, filename)
     if not os.path.exists(json_file):
         return []
@@ -67,15 +74,31 @@ def get_paragraphs(working_dir, filename):
     return paragraphs
 
 
-def _expand_paragraphs(paragraphs, max_words_paragraph):
+def _expand_paragraphs(paragraphs, max_tokens_paragraph):
     """
     Expand paragraphs to a maximum number of words per paragraph.
     """
     new_paragraphs = []
     new_paragraph = ""
+
     for paragraph in paragraphs:
+        token_count = count_tokens(paragraph)
+        if token_count > max_tokens_paragraph:
+            raise Exception(
+                f"Paragraph contains {token_count} tokens, which is more than the maximum of {max_tokens_paragraph} tokens per paragraph."
+            )
+
+
+    for paragraph in paragraphs:
+
+        token_count = count_tokens(paragraph)
+        if token_count > max_tokens_paragraph:
+            raise Exception(
+                f"Paragraph contains {token_count} tokens, which is more than the maximum of {max_tokens_paragraph} tokens per paragraph."
+            )
+
         new_paragraph += paragraph + "\n\n"
-        if len(new_paragraph) > max_words_paragraph:
+        if count_tokens(new_paragraph) > max_tokens_paragraph:
             new_paragraphs.append(new_paragraph)
             new_paragraph = ""
     return new_paragraphs
