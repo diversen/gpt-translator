@@ -1,12 +1,14 @@
 import openai
 import time
 import logging
-import tempfile
 import os
+from dotenv import load_dotenv
+# from gpt_translator.gpt_translator import file_utils
 
-from gpt_translator import file_utils
 
-temp_dir = tempfile.gettempdir()
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 # log to stdout
 logger = logging.getLogger(__name__)
@@ -16,7 +18,6 @@ logger.addHandler(logging.StreamHandler())
 class GPTTranslator:
     def __init__(
         self,
-        api_key,
         from_file,
         pre_prompt,
         working_dir="./output",
@@ -28,11 +29,6 @@ class GPTTranslator:
         max_tokens_paragraph=1024,
         model="gpt-3.5-turbo",
     ):
-        # Read api key from file
-        with open(api_key, "r") as file:
-            api_key = file.read().strip()
-
-        openai.api_key = api_key
 
         self.pre_prompt = pre_prompt
         self.idx_begin = idx_begin

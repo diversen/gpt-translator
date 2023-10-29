@@ -1,6 +1,8 @@
 from gpt_translator.gpt_translator import GPTTranslator
 import logging
 
+exit()
+
 # set logging level
 logging.basicConfig(level=logging.INFO)
 
@@ -21,9 +23,9 @@ The text to modernize begins after the next colon: """
 
 # Initialize the GPTTranslate class and call the translate method
 gpt_translate = GPTTranslator(
-    "/home/dennis/.config/shell-gpt-php/api_key.txt",
     "./example/winged-death.md",
     pre_prompt,
+    api_env=".env",
     working_dir="./example",
     idx_begin=0,
     model="gpt-3.5-turbo",
