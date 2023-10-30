@@ -73,7 +73,7 @@ class GPTTranslator:
         position = len(paragraphs_translated)
 
         logging.info(f"Total paragraphs to translate: {len(paragraphs)}")
-        logging.info(f"Starting from paragraph index: {position}")
+        logging.info(f"Starting from paragraph: {position + 1}")
 
         for idx, para in enumerate(paragraphs[position:], position):
             retry = True
@@ -82,7 +82,7 @@ class GPTTranslator:
             while retry:
                 try:
                     logging.info(
-                        f"Translating paragraph index {idx} of {len(paragraphs)}"
+                        f"Translating paragraph {idx + 1} of {len(paragraphs)}"
                     )
 
                     result = self.translate_string(para)

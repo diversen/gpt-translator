@@ -23,10 +23,10 @@ The text to modernize begins after the next colon: """
 gpt_translate = GPTTranslator(
     "./output/winged-death.md",
     pre_prompt,
-    working_dir="./example",
+    working_dir="./output",
     idx_begin=0,
     model="gpt-3.5-turbo",
-    max_tokens_paragraph=1024,
+    max_tokens_paragraph=256,
 )
 
 gpt_translate.translate()

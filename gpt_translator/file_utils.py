@@ -33,6 +33,12 @@ def read_source_file(filename, max_tokens_paragraph):
     # Split on double line endings
     paragraphs = content.split("\n\n")
 
+    # replace only single newlines wit spaces, but not multiple newlines
+    paragraphs = [re.sub('(?<!\n)\n(?!\n)', ' ', para) for para in paragraphs]
+
+    # replace any double space with a single space
+    paragraphs = [re.sub(' +', ' ', para) for para in paragraphs]
+
     # Expand paragraphs
     paragraphs = _expand_paragraphs(paragraphs, max_tokens_paragraph)
 
