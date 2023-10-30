@@ -3,7 +3,7 @@ from setuptools import setup, find_packages  # type: ignore
 
 REQUIREMENTS = [i.strip() for i in open("requirements.txt").readlines()]
 
-# get version from module stadsarkiv_client
+# get version from module
 VERSION = ""
 with open("gpt_translator/__init__.py", "r") as fh:
     for line in fh.readlines():
@@ -20,7 +20,6 @@ setup(
     author_email="dennis.iversen@gmail.com",
     license="MIT",
     packages=find_packages(exclude=("tests",)),
-    # package_data={"stadsarkiv_client": ["templates/**/**", "templates/**", "static/**/**", ".env-dist"]},
     install_requires=REQUIREMENTS,
     entry_points={
         "console_scripts": [
