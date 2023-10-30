@@ -51,7 +51,7 @@ gpt-translator translate --help
 Example: 
 
 ```bash
-gpt-translator translate -f output/winged-death.md -p "Translate the following text to a simple English so that a child aged 12 could read it with ease"
+gpt-translator translate -f output/hamlet_part.md -p "Translate the following two scenes from Hamlet by Shakespeare to a modern version so that it is easier to understand. It should be as simple as possible, but no simpler."
 ```
 
 ### License
