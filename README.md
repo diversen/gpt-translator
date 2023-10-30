@@ -1,11 +1,13 @@
-### Install
+### Install using pipx
+
+For usage using command line. 
 
 ```bash
-    pipx install git+https://github.com/diversen/gpt-translator.git
+pipx install git+https://github.com/diversen/gpt-translator.git
 ```
 
 ```bash
-    gpt-translator translate --help
+gpt-translator translate --help
 ```
 
     Usage: gpt-translator translate [OPTIONS]
