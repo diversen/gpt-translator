@@ -19,10 +19,10 @@ def cli():
 @click.option('--top-p', default=0.99, help='Top P.')
 @click.option('--max-tokens-paragraph', default=1024, help='Max tokens per paragraph.')
 @click.option('--model', default='gpt-3.5-turbo', help='Model to use.')
-def translate(from_file, pre_prompt, working_dir, idx_begin, failure_sleep, temperature, presence_penalty, top_p, max_tokens_paragraph, model):
+def translate(from_file, prompt, working_dir, idx_begin, failure_sleep, temperature, presence_penalty, top_p, max_tokens_paragraph, model):
     translator = GPTTranslator(
         from_file=from_file,
-        prompt=pre_prompt,
+        prompt=prompt,
         working_dir=working_dir,
         idx_begin=idx_begin,
         failure_sleep=failure_sleep,
