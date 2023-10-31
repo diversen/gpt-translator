@@ -40,9 +40,9 @@ except IndexError:
 
 # python function that changes the __init__.py version
 def change_init(version):
-    with open("./stadsarkiv_client/__init__.py", "r") as f:
+    with open("./gpt_translator/__init__.py", "r") as f:
         lines = f.readlines()
-    with open("./stadsarkiv_client/__init__.py", "w") as f:
+    with open("./gpt_translator/__init__.py", "w") as f:
         for line in lines:
             if line.startswith("__version__ ="):
                 f.write(f'__version__ = "{version}"\n')
