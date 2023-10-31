@@ -51,7 +51,7 @@ def change_init(version):
 
 
 # change in README. Search for this string below <!-- LATEST-VERSION-START -->
-# and change the line to \tpip install git+https://github.com/aarhusstadsarkiv/stadsarkiv-client@{version}
+# and change the line to \tpip install git+https://github.com/diversen/gpt-translator@{version}
 def change_readme(str_search, replace):
     dynamic_next_line = False
     with open("README.md", "r") as f:
@@ -74,8 +74,8 @@ if os.system("git diff-index --quiet HEAD --") != 0:
     print("There are uncommited changes")
     sys.exit(1)
 
-change_readme("<!-- LATEST-VERSION-PIPX -->", f"\tpipx install git+https://github.com/aarhusstadsarkiv/stadsarkiv-client@{version}\n")
-change_readme("<!-- LATEST-VERSION-PIP -->", f"\tpip install git+https://github.com/aarhusstadsarkiv/stadsarkiv-client@{version}\n")
+change_readme("<!-- LATEST-VERSION-PIPX -->", f"\tpipx install git+https://github.com/diversen/gpt-translator@{version}\n")
+change_readme("<!-- LATEST-VERSION-PIP -->", f"\tpip install git+https://github.com/diversen/gpt-translator@{version}\n")
 # change_pyproject_version(version)
 change_init(version)
 
