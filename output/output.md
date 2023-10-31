@@ -1,305 +1,303 @@
+ACT I
+
 SCENE I. Elsinore. A platform before the Castle.
 
 Enter Francisco and Barnardo, two guards.
 
-BARNARDO. Who’s there?
+BARNARDO. Who's there?
 
-FRANCISCO. Hey, answer me. Stop and show yourself.
+FRANCISCO. No, answer me. Stop and show yourself.
 
 BARNARDO. Long live the King!
 
 FRANCISCO. Barnardo?
 
-BARNARDO. Yes, it's me.
+BARNARDO. Yes.
 
 FRANCISCO. You're right on time.
 
-BARNARDO. It's twelve o'clock now. Go to bed, Francisco.
+BARNARDO. It's twelve o'clock. Go to bed, Francisco.
 
-FRANCISCO. Thanks for taking over. It's freezing and I feel sick.
+FRANCISCO. Thank you for relieving me. It's freezing and I feel sick.
 
-BARNARDO. Did you have a quiet shift?
+BARNARDO. Did you have a quiet watch?
 
 FRANCISCO. Not a sound.
 
-BARNARDO. Well, good night. If you see Horatio and Marcellus, the other guards, tell them to hurry.
+BARNARDO. Alright, good night. If you see Horatio and Marcellus, the other guards, tell them to hurry.
 
 Enter Horatio and Marcellus.
 
-FRANCISCO. I think I hear them. Stop! Who's there?
+FRANCISCO. I think I hear them. Stop! Who is there?
 
-HORATIO. We're friends of this place.
+HORATIO. We are friends of this place.
 
-MARCELLUS. And loyal to the king.
+MARCELLUS. And loyal to the King.
 
-FRANCISCO. Good night to you.
+FRANCISCO. Good night.
 
-MARCELLUS. Farewell, honest soldier. Who relieved you?
+MARCELLUS. Goodbye, honest soldier. Who relieved you?
 
 FRANCISCO. Barnardo took my place. Good night.
 
-[Exit]
+[_Exit._]
 
 MARCELLUS. Hey, Barnardo!
 
 BARNARDO. What, is Horatio there?
 
-HORATIO. Only a part of him.
+HORATIO. Only part of him.
 
-BARNARDO. Welcome, Horatio. Welcome, Marcellus.
+BARNARDO. Welcome, Horatio. Welcome, good Marcellus.
 
 MARCELLUS. Has that thing appeared again tonight?
 
 BARNARDO. I haven't seen anything.
 
-MARCELLUS. Horatio thinks it's just our imagination and doesn't believe it. So, I asked him to join us tonight and watch. If the ghost appears again, he can confirm what we've seen.
+MARCELLUS. Horatio thinks it's just our imagination and doesn't believe it. That's why I asked him to join us tonight, so he can see it too and talk to it.
 
-HORATIO. Oh, it won't appear.
+HORATIO. Psh, it won't appear.
 
-BARNARDO. Sit down and let us try to convince you, who don't believe our story, of what we have witnessed for two nights.
+BARNARDO. Sit down for a moment, and let us tell you again what we've seen these past two nights.
 
-HORATIO. Fine, let's sit and listen to Barnardo talk about this.
+HORATIO. Alright, let's sit down and listen to Barnardo talk about this.
 
-BARNARDO. Last night, when that same star in the west had finished its course and illuminated the sky, Marcellus and I, when the bell struck one...
+BARNARDO. Last night, when that star in the west had moved to light up that part of the sky where it is now, Marcellus and I, when the bell struck one--
 
 MARCELLUS. Quiet, stop talking. Look, it's coming again.
 
 Enter Ghost.
 
-BARNARDO. It looks just like the dead king.
+BARNARDO. It looks just like the dead King.
 
-MARCELLUS. You're a scholar, speak to it, Horatio.
+MARCELLUS. You're a scholar, talk to it, Horatio.
 
-BARNARDO. Doesn't it look like the king? Pay attention, Horatio.
+BARNARDO. Doesn't it look like the King? Pay attention, Horatio.
 
-HORATIO. Yes, it looks very similar. It fills me with fear and wonder.
+HORATIO. Yes, it does. It fills me with fear and wonder.
 
 BARNARDO. It wants to be spoken to.
 
 MARCELLUS. Ask it something, Horatio.
 
-HORATIO. Who are you, appearing at this time of night? And why do you have the appearance of the great and powerful king of Denmark? By heaven, I command you to speak.
+HORATIO. Who are you that appears at this time of night, and why do you have the appearance of the powerful and noble King of Denmark? By heaven, I command you to speak.
 
-MARCELLUS. It's offended.
+MARCELLUS. It's angry.
 
 BARNARDO. Look, it's walking away.
 
 HORATIO. Wait! Speak, speak! I command you to speak!
 
-[Exit Ghost]
+[_Exit Ghost._]
 
 MARCELLUS. It's gone and won't answer.
 
-BARNARDO. Horatio, what's wrong with you? You're trembling and pale. Isn't this more than just imagination? What do you think?
+BARNARDO. What's wrong, Horatio? You're trembling and pale. Isn't this more than just imagination? What do you think?
 
-HORATIO. I swear to God, I wouldn't believe it unless I saw it with my own eyes.
+HORATIO. I swear to God, I wouldn't believe it if I didn't see it with my own eyes.
 
-MARCELLUS. Doesn't it look like the king?
+MARCELLUS. Does it not look like the King?
 
-HORATIO. Yes, it does. Just like himself. This is the armor he wore when he fought against Norway. I remember the anger in his face when he attacked the Polish soldiers on the ice. It's strange.
+HORATIO. It looks just like him. That's the armor he wore when he fought against Norway; that's how he looked when he angrily attacked the Polish. It's strange.
 
-MARCELLUS. He has walked past our watch twice before, at this same hour.
+MARCELLUS. This has happened twice before, at this same time, with a military stride, passing by us.
 
-HORATIO. I don't know what it means specifically, but I have a feeling that something strange is about to happen to our country.
+HORATIO. I don't know the details, but based on my opinion, something strange and dangerous is about to happen to our country.
 
-MARCELLUS. Alright, sit down and tell me, if you know, why these guards are so strict and watchful every night. And why there are so many cannons and weapons being prepared for war. And why so many shipbuilders are working tirelessly, even on Sundays. Who can tell me what's going on?
+MARCELLUS. Come on, sit down and tell me, if you know, why there's such a strict and watchful guard every night, why there are constant sounds of cannons and foreign ships preparing for war, why there are so many shipbuilders working day and night. What's going on that requires this intense activity? Who can tell me?
 
-HORATIO. I can do that. At least, that's what people are saying. Our previous King, who we just saw a picture of, was killed by Fortinbras of Norway. Fortinbras was driven by pride to challenge our King to a fight. Our brave Hamlet, who is highly regarded in our part of the world, killed Fortinbras in the battle. According to a legal agreement, Fortinbras lost not only his life but also all his lands to the winner. Our King then pledged a portion of these lands to Fortinbras, which would have been returned to him if he had won. But, according to the terms of the agreement, they now belong to Hamlet. Now, young Fortinbras, who is eager for power and has gathered a group of lawless people in Norway, wants to forcefully take back those lands that his father lost. This is the main reason why we are preparing for war and why we are on high alert.
+HORATIO. I can do that. At least, that's what people are saying. Our previous king, who we just saw the image of, was killed by Fortinbras of Norway. Fortinbras was driven by his pride to challenge our king to a fight. Our brave Hamlet, who is highly regarded in our part of the world, killed Fortinbras in the battle. According to a signed agreement and the rules of law and heraldry, Fortinbras forfeited his lands to the winner, our king. Half of those lands were pledged by our king and would have gone back to Fortinbras if he had won. Now, young Fortinbras, who is eager for power, has gathered a group of lawless followers in Norway. They are preparing to forcefully take back the lands that Fortinbras' father lost. This is the reason we are preparing for war and why we are on high alert.
 
-BARNARDO. I think that's exactly what's happening. It makes sense that this mysterious figure resembles the previous King, who was the reason for the ongoing wars.
+BARNARDO. I think that's exactly what's happening. It makes sense that this strange figure is walking through our watch, looking like the king who started these wars.
 
-HORATIO. It's something to trouble the mind. Just like in ancient Rome, before Julius Caesar fell, the graves were empty and the ghosts were heard in the streets. There were disasters in the sun, like stars with trails of fire and blood. The planet that influences the sea was almost sick enough to bring doomsday. These signs, both in heaven and on earth, have been shown to our people.
+HORATIO. It's something that troubles the mind. In ancient Rome, right before Julius Caesar died, the graves were empty and the ghosts of the dead were wandering the streets. There were strange occurrences in the sky, like shooting stars and red rain. It seemed like disasters were happening. Even the moon, which controls the seas, was sick and almost disappeared. These are signs that something bad is about to happen. Heaven and earth have shown us these signs.
 
-[The Ghost reappears.]
+[The ghost returns]
 
-But wait, look! There it is again! I'll approach it, even if it harms me. Stay, illusion! If you can make any sound or speak, do so. If there's anything good that can be done for you, and in turn for me, speak. If you know what will happen to our country, and if that knowledge can help us avoid it, speak! Or if you have hidden treasure buried in the ground, as spirits are said to do, speak about it. Stay, and speak!
+But wait, look! There it is again! I'll confront it, even if it harms me. Stay, illusion! If you can make any sound or speak, talk to me. If there's anything good that you can do to give yourself peace and help me, speak to me. If you know what will happen to our country and can prevent it, speak! Or if you have hidden treasure buried in the ground, as they say spirits often do, talk about it. Stay and speak!
 
-[The rooster crows.]
+[The rooster crows]
 
 Stop it, Marcellus!
 
-MARCELLUS. Should I hit it with my weapon?
+MARCELLUS. Should I attack it with my weapon?
 
 HORATIO. Go ahead, if it doesn't disappear.
 
-BARNARDO. It's still here!
+BARNARDO. It's here!
 
-HORATIO. It's still here!
+HORATIO. It's here!
 
-[The Ghost disappears.]
+[The ghost disappears]
 
-MARCELLUS. It's gone! We were wrong to try to attack it, for it's as intangible as air, and our futile blows only mock it.
+MARCELLUS. It's gone! We shouldn't have tried to attack it. It's like air, invulnerable, and our attempts to harm it were just mockery.
 
 BARNARDO. It was about to speak when the rooster crowed.
 
-HORATIO. And then it vanished, as if it were guilty and afraid of being caught. I've heard that the rooster, which announces the morning, wakes up the sun with its loud and piercing call. And at that signal, whether it's in the sea, the fire, the earth, or the air, wandering spirits return to their boundaries. The truth of this is evident in what just happened.
+HORATIO. And then it disappeared, as if it was guilty and scared of being called. I've heard that the rooster, which announces the morning, wakes up the sun god with its loud and high-pitched call. When the rooster crows, whether it's at sea, on land, in the sky, or underground, spirits have to go back to where they belong. This sighting confirms that.
 
-MARCELLUS. It disappeared at the sound of the rooster. Some say that when the season of our Savior's birth is celebrated, the morning bird sings all night long. And during that time, no spirit dares to roam, the nights are safe, the planets do not cause harm, fairies do not play tricks, and witches lose their power. It's a sacred and blessed time.
+MARCELLUS. It disappeared when the rooster crowed. Some say that when it's time to celebrate the birth of our savior, the morning bird sings all night long. During that time, spirits are not allowed to roam around. The nights are safe, planets don't cause harm, fairies and witches lose their powers. It's a holy and peaceful time.
 
-HORATIO. I've heard that too, and I partly believe it. But look, the morning is dressed in a red robe as it walks over the dew on that hill in the east. Let's end our watch and, in my opinion, let's tell young Hamlet what we've seen tonight. I believe this silent spirit will speak to him. Do you agree that we should inform him? It's necessary for our friendship and our duty.
+HORATIO. I've heard that too, and I partly believe it. But look, the morning is coming. Let's end our watch and, in my opinion, let's tell young Hamlet about what we've seen tonight. I am certain that this silent spirit will speak to him. Do you agree that we should inform him? It's necessary for our love and duty.
 
-Scene I: Marcellus and another character are discussing finding someone.
-
-Marcellus: Let's do it, I pray, and I know this morning where we can find him most conveniently.
+MARCELLUS. Let's go, I pray, and I know where we can find him easily.
 
 [They exit.]
 
-Scene II: A room in the castle where the King, Queen, Hamlet, and others are present.
+SCENE II. Elsinore. A grand room in the Castle.
 
-King: Although the memory of our dear brother Hamlet's death is still fresh, and it is fitting for us to grieve, and for our entire kingdom to be filled with sorrow, we have tried to use our wisdom to balance our grief. We remember him and also think of ourselves. Therefore, our former sister, who is now our queen, we have married her with mixed emotions of joy and sadness, both celebrating and mourning at the same time. We have not excluded your better judgment in this decision. Thank you all. Now, let's talk about young Fortinbras. He mistakenly believes that our state is weak and vulnerable due to the death of our brother, and he has been bothering us with messages about reclaiming lands lost by his father. That's enough about him. Now, for ourselves and for this meeting: we have written a letter to the King of Norway, who is the uncle of young Fortinbras. He is old, weak, and barely able to hear, so we want to stop his nephew's plans. We are sending you, Cornelius and Voltemand, to deliver this message, but you do not have any personal power to negotiate beyond what is stated in the letter. Farewell, and make haste.
+Claudius, the King of Denmark, Gertrude the Queen, Hamlet, Polonius, Laertes, Voltemand, Cornelius, Lords, and Attendants enter.
 
-Cornelius and Voltemand: We will fulfill our duty, in everything.
+KING. Although the memory of our dear brother Hamlet's death is still fresh, and it is fitting for us to grieve and for our entire kingdom to share in our sorrow, we have managed to control our emotions enough to think about him wisely, while also remembering ourselves. That is why we have married our former sister, who is now our queen and the ruler of this powerful state. We have done so with mixed feelings of joy and sadness, celebrating her marriage while mourning our brother's death. We have not made this decision without considering your wisdom, which has been freely given in support of this marriage. We thank you all for that. Now, let me tell you about young Fortinbras. He mistakenly believes that our kingdom is weak and in chaos after the death of our brother, and he has been bothering us with messages demanding that we surrender the lands his father lost. That's enough about him. Now, let's talk about ourselves and the purpose of this meeting: we have written a letter to the uncle of young Fortinbras, the King of Norway, who is old and weak and can barely hear. We have asked him to stop his nephew's aggressive intentions, as his troops, resources, and preparations have all been taken from his own subjects. We are sending you, Cornelius and Voltemand, as messengers to deliver this message, but you have no personal authority to negotiate with the King beyond what is written in the letter. Farewell, and may your haste demonstrate your loyalty.
 
-King: We have no doubts about that. Farewell.
+CORNELIUS and VOLTEMAND. We will fulfill our duty in all aspects.
+
+KING. We have no doubt about it. Farewell.
 
 [Cornelius and Voltemand exit.]
 
-Now, Laertes, what's going on with you? You mentioned having a request. What is it, Laertes? Speak up to the King, don't hold back. What do you want that I will not offer, but you do not have to ask for? Your father's position in Denmark is as important as the head is to the heart or the hand is to the mouth. What do you desire, Laertes?
+And now, Laertes, what news do you have? You mentioned some request. What is it, Laertes? Speak up, don't hold back. What do you want that I won't offer without you asking? Your father's position is as important to Denmark as the head is to the heart or the hand is to the mouth. What is your request, Laertes?
 
-Laertes: My lord, I ask for your permission and favor to return to France. Although I willingly came to Denmark to show my loyalty during your coronation, now that my duty is done, my thoughts and wishes turn back to France. I bow to your gracious permission and forgiveness.
+LAERTES. My lord, I ask for your permission and approval to return to France. Although I willingly came to Denmark to show my loyalty during your coronation, now that I have fulfilled my duty, my thoughts and desires once again turn towards France. I humbly ask for your gracious permission and forgiveness.
 
-King: Did you ask for your father's permission? What does Polonius say?
+KING. Have you received your father's permission? What does Polonius say?
 
-Polonius: He obtained my slow permission through persistent pleading, and eventually, I reluctantly agreed. I beg you to grant him permission to go.
+POLONIUS. He has, my lord, obtained my reluctant consent through persistent requests. Finally, I agreed to let him go. I beg you to grant him permission to leave.
 
-King: Take your time, Laertes. Use it as you wish and make the most of it. But now, my cousin Hamlet, and my son...
+KING. Take your time, Laertes. Use it wisely and enjoy it to the fullest. But now, my cousin Hamlet, and my son—
 
-Hamlet: [Aside] A little more than family, but not really kindred.
+HAMLET. [Aside.] He's more than just a relative, but less than a true family member.
 
-King: Why do you still seem troubled, Hamlet?
+KING. Why do you still seem so gloomy, Hamlet?
 
-Hamlet: Not so, my lord. I am just too exposed to the sun.
+HAMLET. Not at all, my lord. I am just too exposed to the sun.
 
-Queen: Good Hamlet, get rid of your dark sadness and let your eyes show friendship towards Denmark. Don't always keep them closed, searching for your noble father in the dust. You know that death is a natural part of life, leading to eternity.
+QUEEN. My dear Hamlet, stop looking so sad and let your eyes show friendship towards Denmark. Don't always keep your eyes lowered, searching for your noble father in the dust. You know that death is a part of life, and everyone must pass through it to reach eternity.
 
-Hamlet: Yes, madam, it is a common truth.
+HAMLET. Yes, madam, it is a common truth.
 
-Queen: If that's the case, why does it affect you so deeply?
+QUEEN. If that's the case, why does it affect you so deeply?
 
-Hamlet: It's not just an appearance, madam. It's a reality. I don't only wear a black cloak, or put on a sad face, or sigh heavily. No, it's not just the tears in my eyes or the depressed expression on my face. All these outward signs of grief may seem like true indications of my state, but they are just superficial. I have something within me that goes beyond outward display. These external signs are just decorations and symbols of sorrow.
+HAMLET. It's not just an appearance, madam! It truly affects me. It's not just my black cloak, mother, or the customary mourning clothes, or forced sighs, or tears in my eyes, or the sad expression on my face. All these things can be seen and imitated, but I have something deeper within me that cannot be shown. These external signs of grief are just superficial decorations.
 
-KING: Hamlet, it's good and commendable of you to mourn your father, but you should know that your father also lost his own father, and the survivor is obligated to mourn for a period of time. But to continue mourning stubbornly is wrong. It's unmanly and shows a lack of willpower, strength, and understanding. Death is a natural part of life, so why should we be so opposed to it? It's a fault against heaven, the dead, and nature. It's absurd to argue against death, which has always been inevitable. We ask you to let go of this pointless grief and think of us as your father. You are next in line for the throne and we love you just as much as a father loves his son. Your decision to go back to school in Wittenberg goes against what we want. We beg you to stay here with us, as our closest advisor, cousin, and son.
+KING: It's sweet and admirable of you, Hamlet, to honor your father with these mourning duties. But you must understand that your father also lost his own father, and it is our duty as his survivors to mourn for a certain period of time. However, to continue grieving stubbornly is impious and unmanly. It shows a lack of willpower, an unfortified heart, and an unschooled mind. Death is inevitable and common, so why should we oppose it so bitterly? It is a fault to heaven, a fault against the dead, and a fault against nature. It is absurd to reason that death of fathers is a common theme and has always been. We urge you to let go of this overwhelming sorrow and think of us as your father. You are the one closest to our throne, and I love you just as a father loves his son. Your decision to go back to school in Wittenberg is against our wishes. We beg you to stay here where we can see you, as our most important courtier, cousin, and son.
 
-QUEEN: Hamlet, please don't ignore your mother's prayers. Stay with us and don't go to Wittenberg.
+QUEEN: Hamlet, please don't ignore your mother's prayers. I beg you to stay with us and not go to Wittenberg.
 
 HAMLET: I will do my best to obey you, mother.
 
-KING: That's a loving and fair response. Be like us here in Denmark. Now, let's go. Hamlet's agreement brings a smile to my heart. In celebration, let the cannons sound and the heavens echo with the King's toast. Come with me.
+KING: That's a loving and fair response. Be as we are in Denmark. Come, my queen. Hamlet's agreement brings joy to my heart. In celebration, let the cannons tell Denmark's health to the skies, and let the King's toast resound in heaven, echoing like thunder. Let's go.
 
 [Everyone exits except for Hamlet.]
 
-HAMLET: Oh, I wish my flesh could melt away and disappear! Or that God hadn't forbidden suicide. Oh God! How tired, boring, and useless everything in this world seems to me! It's like an overgrown garden full of weeds and disgusting things. How did it come to this? He's been dead for only two months, not even two. He was such an excellent king, like a god compared to a beast. He loved my mother so much, he wouldn't even let the winds touch her face too harshly. Heaven and earth! Do I have to remember? She clung to him as if her desire for him grew with every touch. And yet, within a month—let me not think about it—women are so weak! In just a month, before her mourning shoes had even worn out, she married my uncle. It's so wicked and fast, to rush into an incestuous relationship! This can't be good. But I have to keep quiet, even if it breaks my heart.
+HAMLET: Oh, I wish my flesh would melt away and become a dew! Or that God hadn't forbidden suicide. Oh God! How tired, boring, and useless everything in this world seems to me! It's an overgrown and neglected garden, filled with disgusting and vulgar things. How did it come to this? My father has only been dead for two months—no, not even that long. He was an excellent king, like Hyperion compared to a satyr. He loved my mother so much that he wouldn't let the winds of heaven harm her. Heaven and earth! Do I have to remember this? She clung to him as if her appetite for him grew stronger every day. And yet, within a month—let me not think about it—women, oh women, how frail you are! In just a short month, she married my uncle, my father's brother. But he's nothing like my father, just as I'm nothing like Hercules. Within a month? Before her tears could dry, she married again. Oh, how quickly she rushed into an incestuous relationship! This can't end well. But I must keep my heartbreak to myself.
 
-(Horatio, Marcellus, and Barnardo enter.)
+[Hortatio, Marcellus, and Barnardo enter.]
 
 HORATIO: Greetings, my lord!
 
-HAMLET: I'm glad to see you well, Horatio, I almost forgot myself.
+HAMLET: I'm glad to see you well, Horatio, if I haven't forgotten myself.
 
-HORATIO: It's me, your loyal servant, Horatio.
+HORATIO: It's me, my lord, your loyal servant.
 
-HAMLET: Sir, my good friend, I'll call you by a different name. What brings you here from Wittenberg, Horatio? And Marcellus?
+HAMLET: Sir, my good friend. I'll call you by that name too. And what brings you from Wittenberg, Horatio? Marcellus?
 
-MARCELLUS: I'm here, my lord.
+MARCELLUS: My lord.
 
-HAMLET: I'm very glad to see you. Good evening, sir. But really, what are you doing here, coming all the way from Wittenberg?
+HAMLET: I'm very glad to see you. Good evening, sir. But tell me, what made you leave Wittenberg?
 
-HORATIO: I just wanted to see your father's funeral, my lord.
+HORATIO: I had a desire to see your father's funeral, my lord.
 
-HAMLET. Please don't make fun of me, my friend. I think I saw my mother get married.
+HAMLET: Please don't make fun of me, my friend. I think I saw my mother getting married.
 
-HORATIO. Yes, my lord, it happened soon after that.
+HORATIO: Indeed, my lord, it happened soon after.
 
-HAMLET. What a strange coincidence, Horatio! The food that was supposed to be for the funeral was used at the wedding. I wish I had met my worst enemy in heaven before that day. My father... I can see my father in my mind.
+HAMLET: How ironic, Horatio! The food from the funeral was used for the wedding feast. I wish I had met my worst enemy in heaven before seeing that day, Horatio. My father... I can still see my father.
 
-HORATIO. Where, my lord?
+HORATIO: Where, my lord?
 
-HAMLET. In my imagination, Horatio.
+HAMLET: In my mind's eye, Horatio.
 
-HORATIO. I saw him once; he was a great king.
+HORATIO: I saw him once; he was a great king.
 
-HAMLET. He was a man, overall, I won't see someone like him again.
+HAMLET: He was just a man, take him as a whole, I will never see anyone like him again.
 
-HORATIO. My lord, I think I saw him last night.
+HORATIO: My lord, I think I saw him last night.
 
-HAMLET. Saw? Who?
+HAMLET: Saw? Who?
 
-HORATIO. My lord, your father, the king.
+HORATIO: My lord, your father, the king.
 
-HAMLET. My father, the king!
+HAMLET: My father, the king!
 
-HORATIO. Calm down and listen carefully, until I can tell you what these gentlemen witnessed. 
+HORATIO: Listen closely, until I can confirm this with the testimony of these gentlemen. They encountered a figure that looked just like your father, fully armed, walking slowly and majestically past them. He walked by them three times, just a few steps away, while they were frozen with fear and unable to speak. They told me this in secret, and I witnessed it myself on the third night. Everything they described was true. I knew your father; these hands are just like his.
 
-HAMLET. Please, let me hear it.
+HAMLET: But where did this happen?
 
-HORATIO. These two gentlemen, Marcellus and Barnardo, had two nights in a row encountered something strange while on their watch in the middle of the night. A figure that looked exactly like your father, fully armed, appeared before them and walked slowly past them. He walked by them three times, so close that they could almost touch him, while they were frozen with fear and couldn't speak. They told me this in secret, and on the third night, I watched with them. Just as they described, the apparition appeared. I knew your father; this ghost looked exactly like him.
+MARCELLUS: My lord, on the platform where we were keeping watch.
 
-HAMLET. But where did this happen?
+HAMLET: Did you not speak to it?
 
-MARCELLUS. My lord, it happened on the platform where we were standing guard.
+HORATIO: My lord, I did, but it didn't respond. Although, at one point, it seemed to lift its head as if it wanted to speak. But then the rooster crowed and it quickly disappeared.
 
-HAMLET. Did you not speak to it?
+HAMLET: It's very strange.
 
-HORATIO. My lord, I did, but it didn't respond. However, at one point, it lifted its head as if it wanted to speak. But then the morning cock crowed loudly, and it quickly disappeared.
+HORATIO: I swear, my honored lord, it's true. We felt it was our duty to tell you.
 
-HAMLET. That's very strange.
+HAMLET: Indeed, indeed, sirs, but this troubles me. Are you keeping watch tonight?
 
-HORATIO. I swear, my honored lord, it's true. We thought it was our duty to inform you.
+MARCELLUS and BARNARDO: Yes, my lord.
 
-HAMLET. Indeed, indeed, gentlemen, this troubles me. Are you on duty tonight?
+HAMLET: Armed, you say?
 
-MARCELLUS and BARNARDO. Yes, my lord.
+Both: Yes, my lord.
 
-HAMLET. And you are armed?
+HAMLET: From head to toe?
 
-Both. Yes, my lord.
+BOTH: Yes, my lord.
 
-HAMLET. Completely armed?
+HAMLET: So you didn't see his face?
 
-BOTH. Yes, my lord, from head to foot.
+HORATIO: Oh yes, my lord, he had his helmet on.
 
-HAMLET. Then you did not see his face?
+HAMLET: Did he look angry?
 
-HORATIO. Oh yes, my lord, he had his helmet on.
+HORATIO: His expression showed more sadness than anger.
 
-HAMLET. Did he look angry?
+HAMLET: Pale or red?
 
-HORATIO. His expression was more sad than angry.
+HORATIO: Very pale.
 
-HAMLET. Was he pale or red?
+HAMLET: And he stared at you?
 
-HORATIO. Very pale.
+HORATIO: Constantly.
 
-HAMLET. And did he stare at you?
+HAMLET: I wish I had been there.
 
-HORATIO. Constantly.
+HORATIO: It would have amazed you.
 
-HAMLET. I wish I had been there.
+HAMLET: Very likely, very likely. Did it stay for long?
 
-HORATIO. It would have amazed you.
+HORATIO: It stayed for as long as it takes to count to a hundred at a moderate pace.
 
-HAMLET. Very likely, very likely. Did it stay there for a long time?
+MARCELLUS and BARNARDO: Longer, longer.
 
-HORATIO. It stayed for as long as it would take to count to a hundred with moderate speed.
+HORATIO: Not when I saw it.
 
-MARCELLUS and BARNARDO. Longer, longer.
+HAMLET: His beard was gray, right?
 
-HORATIO. Not when I saw it.
+HORATIO: Yes, it was, just like I've seen it before, a mix of black and white.
 
-HAMLET. Was his beard gray?
+HAMLET: I will keep watch tonight. Maybe it will appear again.
 
-HORATIO. Yes, it was, just like I remember it when he was alive.
+HORATIO: I'm sure it will.
 
-HAMLET. I will keep watch tonight. Maybe it will appear again.
+HAMLET: If it takes on my noble father's appearance, I will speak to it, even if it's as if hell itself is telling me to be quiet. I beg you all, if you have kept this sighting a secret until now, please continue to keep silent about it. And whatever else happens tonight, understand it but don't speak of it. I will repay your loyalty. So, farewell. I will visit you on the platform between eleven and twelve.
 
-HORATIO. I'm sure it will.
+ALL: We are loyal to you, my lord.
 
-HAMLET. If it takes the form of my noble father, I will speak to it, even if hell itself tells me to be silent. I beg all of you, if you have kept this sighting a secret until now, continue to keep it a secret. And whatever else happens tonight, understand it but don't speak of it. I will repay your loyalty. So, goodbye for now. I will visit you on the platform between eleven and twelve.
+HAMLET: Your loyalty is reciprocated. Farewell.
 
-ALL. We are loyal to you, my lord.
+[Horatio, Marcellus, and Barnardo exit]
 
-HAMLET. Your loyalty is reciprocated. Goodbye.
-
-[Exit Horatio, Marcellus, and Barnardo.]
-
-My father's spirit is armed! Something is not right; I suspect foul play. I wish it was night already! Until then, I will remain calm and wait. Evil deeds will eventually come to light, no matter how much they are hidden.
+My father's ghost in armor! Something is not right; I suspect foul play. I wish the night would come! Until then, I will wait patiently, knowing that evil deeds will eventually come to light.
