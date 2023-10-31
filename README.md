@@ -26,17 +26,18 @@ Or just add it to your environment.
 
 ### Install as requirement
 
-```bash
-pip install git+https://github.com/diversen/gpt-translator.git
-```
+<!-- LATEST-VERSION-PIP -->
+    pip install git+https://github.com/diversen/gpt-translator.git
 
 For usage see [translate.py](translate.py)
 
 ### As command line tool
 
-```bash
-pipx install git+https://github.com/diversen/gpt-translator.git
-```
+Install latest version using pipx
+
+<!-- LATEST-VERSION-PIPX -->
+    pipx install git+https://github.com/diversen/gpt-translator.git@v0.0.1
+
 
 ```bash
 gpt-translator translate --help
