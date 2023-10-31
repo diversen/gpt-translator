@@ -11,10 +11,9 @@ def cli():
 
 @click.command()
 @click.option('-f', '--from-file', help='Source file for translation.', required=True)
-@click.option('-p', '--pre-prompt', help='Pre-prompt for translation.', required=True)
+@click.option('-p', '--prompt', help='Prompt for translation.', required=True)
 @click.option('-d', '--working-dir', default='./output', help='Working directory. Default is ./output')
-@click.option('-i', '--idx-begin', default=0, help='Index to start from.')
-@click.option('--failure-sleep', default=10, help='Failure sleep time.')
+@click.option('--failure-sleep', default=10, help='Failure sleep time. Default is 10 seconds.')
 @click.option('--temperature', default=0.7, help='Temperature.')
 @click.option('--presence-penalty', default=0.1, help='Presence penalty.')
 @click.option('--top-p', default=0.99, help='Top P.')
@@ -23,7 +22,7 @@ def cli():
 def translate(from_file, pre_prompt, working_dir, idx_begin, failure_sleep, temperature, presence_penalty, top_p, max_tokens_paragraph, model):
     translator = GPTTranslator(
         from_file=from_file,
-        pre_prompt=pre_prompt,
+        prompt=pre_prompt,
         working_dir=working_dir,
         idx_begin=idx_begin,
         failure_sleep=failure_sleep,

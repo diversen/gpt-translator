@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 from gpt_translator import file_utils
 
 
+# check if OPENAI_API_KEY exists in environment
+
+
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
@@ -19,9 +22,8 @@ class GPTTranslator:
     def __init__(
         self,
         from_file,
-        pre_prompt,
+        prompt,
         working_dir="./output",
-        idx_begin=0,  # idx to start from
         failure_sleep=10,
         temperature=0.7,
         presence_penalty=0.1,
@@ -30,8 +32,7 @@ class GPTTranslator:
         model="gpt-3.5-turbo",
     ):
 
-        self.pre_prompt = pre_prompt
-        self.idx_begin = idx_begin
+        self.prompt = prompt
         self.failure_sleep = failure_sleep
         self.from_file = from_file
         self.working_dir = working_dir
@@ -44,7 +45,7 @@ class GPTTranslator:
         self.failure_iterations = 1
 
     def get_params(self, message):
-        message = self.pre_prompt + message
+        message = self.prompt + message
         params = {
             "model": self.model,
             "temperature": self.temperature,
