@@ -2,6 +2,11 @@ import re
 import os
 import json
 import tiktoken
+import logging
+
+# log to stdout
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.StreamHandler())
 
 
 def count_tokens(string: str) -> int:
@@ -9,7 +14,7 @@ def count_tokens(string: str) -> int:
     Returns the number of tokens in a text string.
     cl100k_base: gpt-4, gpt-3.5-turbo, text-embedding-ada-002
     """
-    encoding = tiktoken.get_encoding('cl100k_base')
+    encoding = tiktoken.get_encoding("cl100k_base")
     num_tokens = len(encoding.encode(string))
     return num_tokens
 
@@ -34,10 +39,10 @@ def read_source_file(filename, max_tokens_paragraph):
     paragraphs = content.split("\n\n")
 
     # replace only single newlines wit spaces, but not multiple newlines
-    paragraphs = [re.sub('(?<!\n)\n(?!\n)', ' ', para) for para in paragraphs]
+    paragraphs = [re.sub("(?<!\n)\n(?!\n)", " ", para) for para in paragraphs]
 
     # replace any double space with a single space
-    paragraphs = [re.sub(' +', ' ', para) for para in paragraphs]
+    paragraphs = [re.sub(" +", " ", para) for para in paragraphs]
 
     # Expand paragraphs
     paragraphs = _expand_paragraphs(paragraphs, max_tokens_paragraph)
@@ -94,9 +99,7 @@ def _expand_paragraphs(paragraphs, max_tokens_paragraph):
                 f"Paragraph contains {token_count} tokens, which is more than the maximum of {max_tokens_paragraph} tokens per paragraph."
             )
 
-
     for paragraph in paragraphs:
-
         token_count = count_tokens(paragraph)
         if token_count > max_tokens_paragraph:
             raise Exception(
@@ -108,3 +111,15 @@ def _expand_paragraphs(paragraphs, max_tokens_paragraph):
             new_paragraphs.append(new_paragraph)
             new_paragraph = ""
     return new_paragraphs
+
+
+def cleanup(directory):
+    files_to_remove = ["input.md", "input.json", "output.md"]
+    
+    for filename in files_to_remove:
+        file_path = os.path.join(directory, filename)
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            logger.info(f"Removed {file_path}")
+
+    logger.info("Cleanup complete.")

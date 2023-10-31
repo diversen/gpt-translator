@@ -6,9 +6,6 @@ from dotenv import load_dotenv
 from gpt_translator import file_utils
 
 
-# check if OPENAI_API_KEY exists in environment
-
-
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
@@ -31,7 +28,6 @@ class GPTTranslator:
         max_tokens_paragraph=1024,
         model="gpt-3.5-turbo",
     ):
-
         self.prompt = prompt
         self.failure_sleep = failure_sleep
         self.from_file = from_file
