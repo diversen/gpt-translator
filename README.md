@@ -27,7 +27,7 @@ Or just add it to your environment.
 ### Install as requirement
 
 <!-- LATEST-VERSION-PIP -->
-	pip install git+https://github.com/diversen/gpt-translator@v0.0.8
+	pip install git+https://github.com/diversen/gpt-translator@v0.0.9
 
 For usage see [translate.py](translate.py)
 
@@ -36,7 +36,7 @@ For usage see [translate.py](translate.py)
 Install latest version using pipx
 
 <!-- LATEST-VERSION-PIPX -->
-	pipx install git+https://github.com/diversen/gpt-translator@v0.0.8
+	pipx install git+https://github.com/diversen/gpt-translator@v0.0.9
 
 
 ```bash
