@@ -19,9 +19,9 @@ def count_tokens(string: str) -> int:
     return num_tokens
 
 
-def read_source_file(filename, max_tokens_paragraph):
+def file_get_paragraphs(filename, max_tokens_paragraph):
     """
-    Read txt and markdown files and return a list of paragraphs as a list of strings.
+    Clean up a bit of text and return a list of paragraphs as a list of strings.
     """
     with open(filename, "r") as file:
         content = file.read()
@@ -29,20 +29,11 @@ def read_source_file(filename, max_tokens_paragraph):
     # Normalize all line endings to \n
     content = content.replace("\r\n", "\n").replace("\r", "\n")
 
-    # trim all lines
-    content = "\n".join([line.strip() for line in content.split("\n")])
-
     # Transform multiple newlines into max two
     content = re.sub("\n{3,}", "\n\n", content)
 
     # Split on double line endings
     paragraphs = content.split("\n\n")
-
-    # replace only single newlines wit spaces, but not multiple newlines
-    paragraphs = [re.sub("(?<!\n)\n(?!\n)", " ", para) for para in paragraphs]
-
-    # replace any double space with a single space
-    paragraphs = [re.sub(" +", " ", para) for para in paragraphs]
 
     # Expand paragraphs
     paragraphs = _expand_paragraphs(paragraphs, max_tokens_paragraph)
@@ -115,7 +106,7 @@ def _expand_paragraphs(paragraphs, max_tokens_paragraph):
 
 def cleanup(directory):
     files_to_remove = ["input.md", "input.json", "output.md"]
-    
+
     for filename in files_to_remove:
         file_path = os.path.join(directory, filename)
         if os.path.exists(file_path):

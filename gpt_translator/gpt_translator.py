@@ -58,7 +58,7 @@ class GPTTranslator:
         return result
 
     def translate(self):
-        paragraphs = file_utils.read_source_file(
+        paragraphs = file_utils.file_get_paragraphs(
             self.from_file, self.max_tokens_paragraph
         )
 
