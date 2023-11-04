@@ -1,74 +1,84 @@
 ### gpt-translator
 
-A simple tool for translating text using the openai API.
+This can translate large (and small) text files using the OpenAI API.
 
-Give a text file and a prompt the tool will translate the text file using a given prompt.
+Examle usage:
 
-You can translate a complicated text to a simple text. Or you can translate a text to a different language. Or in short: Translate a text to another text.
+* Convert complex text to simple text.
+* Translate text between different languages.
 
-Each text is split into sections defined as text separated by at least two newlines. A paragraph is defined as a number of sections with a maximum number of tokens. The default is 1024 tokens. You can change this by using the `--max-tokens-paragraph` option.
+How It Works:
 
-The tool keeps track of what paragraphs have been translated and will continue from the last translated paragraph if the tool is stopped or interrupted.
+The text is divided into sections, separated by two or more newlines.
+A paragraph is a collection of sections, with a default size limit of max 1024 tokens.
 
-If there is an error the tool will back off exponentially. The default is to sleep 10 second on the first error, 20 seconds on the second error, 40 seconds on the third error, and so on. You can change this by using the `--failure-sleep` option.
+Set a custom token limit for paragraphs with `--max-tokens-paragraph`.
+Adjust the wait time after errors using `--failure-sleep`. The wait time doubles with each consecutive error, starting from 10 seconds.
+
+Output is saved to `output` dir, which is created if it does not exist. This can be changed setting the `--working-dir`. Default output translation file is `output/output.md`.
 
 ### Usage
 
-You need to have an openai API key.
+You need to have an openai API key. 
 
-Add this to a `.env` file in your environment:
+Add your openai API key to your environment, e.g. in .bashrc 
+
+```bash
+export OPENAI_API_KEY=your-api-key
+```
+
+Or add the openai API key to a `.env` file in the directory where you execute `gpt-translator`
 
 ```bash
 OPENAI_API_KEY=your-api-key
 ```
 
-Or just add it to your environment.
-
-### Install as requirement
-
-<!-- LATEST-VERSION-PIP -->
-	pip install git+https://github.com/diversen/gpt-translator@v0.0.9
-
-For usage see [translate.py](translate.py)
-
-### As command line tool
+### Usage as command line tool
 
 Install latest version using pipx
 
 <!-- LATEST-VERSION-PIPX -->
 	pipx install git+https://github.com/diversen/gpt-translator@v0.0.9
 
-
 ```bash
 gpt-translator translate --help
 ```
-    Usage: python -m gpt_translator translate [OPTIONS]
+    Usage: gpt-translator translate [OPTIONS]
 
     Options:
     -f, --from-file TEXT            Source file for translation.  [required]
     -p, --prompt TEXT               Prompt for translation.  [required]
     -d, --working-dir TEXT          Working directory. Default is 'output'
     -m, --max-tokens-paragraph INTEGER
-                                    Max tokens per paragraph. Default 1024
-    --failure-sleep INTEGER         Failure sleep time. Default is 10 seconds.
-    --temperature FLOAT             Temperature.
-    --presence-penalty FLOAT        Presence penalty.
-    --top-p FLOAT                   Top P.
-    --model TEXT                    Model to use.
+                                    Max tokens per paragraph. Default is 1024
+    --failure-sleep INTEGER         Failure sleep time. Default is 10 seconds
+    --temperature FLOAT             Temperature. Default is 0.7
+    --presence-penalty FLOAT        Presence penalty. Default is 0.1
+    --top-p FLOAT                   Top P. Default is 0.99
+    --model TEXT                    Model to use. Default is gpt-3.5-turbo
     --help                          Show this message and exit.
 
-Translat example: 
+Example: 
 
 ```bash
 gpt-translator translate -f output/hamlet_part.md -p "Translate the following two scenes from Hamlet by Shakespeare to a modern version so that it is easier to understand. It should be as simple as possible, but no simpler."
 
 ```
 
+The output file is saved to `output` dir, which is 
+
 Cleanup output:
 
 ```bash
 gpt-translator cleanup
 ```
+
+### Usage as requirement
+
+<!-- LATEST-VERSION-PIP -->
+	pip install git+https://github.com/diversen/gpt-translator@v0.0.9
+
+For usage see [translate.py](translate.py)
 
 ### License
 
