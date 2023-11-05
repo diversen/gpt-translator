@@ -5,7 +5,6 @@ import os
 from dotenv import load_dotenv
 from gpt_translator import file_utils
 
-
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
@@ -52,60 +51,63 @@ class GPTTranslator:
         }
         return params
 
-    def translate_string(self, message):
+    def translate_endpoint(self, message):
         params = self.get_params(message)
         result = openai.ChatCompletion.create(**params)
-        return result
+
+        tokens_used = int(result["usage"]["total_tokens"])
+        if tokens_used == 0:
+            raise Exception("No tokens were returned from API endpoint.")
+
+        content = result["choices"][0]["message"]["content"]
+        return content, tokens_used
 
     def translate(self):
         paragraphs = file_utils.file_get_paragraphs(
             self.from_file, self.max_tokens_paragraph
         )
 
-        file_utils.save_markdown(self.working_dir, "input.md", paragraphs)
-        paragraphs_translated = file_utils.get_paragraphs(
-            self.working_dir, "output.json"
-        )
+        file_utils.save_markdown(self.working_dir, paragraphs)
+        paragraphs_translated = file_utils.get_paragraphs(self.working_dir)
 
         position = len(paragraphs_translated)
         total = len(paragraphs)
 
-        logging.info(f"Total paragraphs to translate: {total}")
-        logging.info(f"Starting from paragraph: {position + 1}")
+        if position == total:
+            logger.info("All paragraphs have been translated.")
+            return
 
         for idx, para in enumerate(paragraphs[position:], position):
-            retry = True
-            failure_iterations = 1
 
-            while retry:
-                try:
-                    logging.info(
-                        f"Translating paragraph {idx + 1} of {total}"
-                    )
+            logging.info(f"Total paragraphs to translate: {total}")
+            logging.info(f"Starting from paragraph: {position + 1}")
 
-                    result = self.translate_string(para)
-                    tokens_used = int(result["usage"]["total_tokens"])
-                    if tokens_used == 0:
-                        raise Exception("No tokens were returned from API endpoint.")
+            content = self.translate_single_paragraph(idx, total, para)
+            paragraphs_translated.append(content.strip())
 
-                    content = result["choices"][0]["message"]["content"]
-                    self.total_tokens += tokens_used
+            file_utils.save_markdown(self.working_dir, paragraphs_translated)
+            file_utils.save_json(self.working_dir, paragraphs_translated)
 
-                    paragraphs_translated.append(content.strip())
-                    file_utils.save_markdown(
-                        self.working_dir, "output.md", paragraphs_translated
-                    )
-                    file_utils.save_json(
-                        self.working_dir, "output.json", paragraphs_translated
-                    )
+            logger.info(f"(Total tokens used: {self.total_tokens})")
 
-                    logger.info(f"(Total tokens used: {self.total_tokens})")
-                    retry = False  # Translation successful, exit while-loop
+    def translate_single_paragraph(self, idx, total, para):
+        retry = True
+        failure_iterations = 1
 
-                except Exception as e:
-                    logger.exception(e)
-                    logger.error(f"Exception. Retry with key: {idx}")
-                    sleep = self.failure_sleep * failure_iterations
-                    logger.info(f"Sleeping for {sleep} seconds before retrying.")
-                    time.sleep(sleep)
-                    failure_iterations *= 2  # exponential backoff
+        while retry:
+            try:
+                logging.info(f"Translating paragraph {idx + 1} of {total}")
+
+                content, tokens_used = self.translate_endpoint(para)
+                self.total_tokens += tokens_used
+
+                retry = False  # Translation successful, exit while-loop
+                return content
+
+            except Exception as e:
+                logger.exception(e)
+                logger.error(f"Exception. Retry with key: {idx}")
+                sleep = self.failure_sleep * failure_iterations
+                logger.info(f"Sleeping for {sleep} seconds before retrying.")
+                time.sleep(sleep)
+                failure_iterations *= 2  # exponential backoff

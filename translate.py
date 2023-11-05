@@ -13,7 +13,7 @@ gpt_translate = GPTTranslator(
     prompt,
     working_dir="./output",
     model="gpt-3.5-turbo",
-    max_tokens_paragraph=1024,
+    max_tokens_paragraph=512,
 )
 
 gpt_translate.translate()
