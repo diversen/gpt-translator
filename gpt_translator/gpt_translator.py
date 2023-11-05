@@ -88,18 +88,19 @@ class GPTTranslator:
         for idx, para in enumerate(paragraphs_src):
             if self.db.idx_is_translated(idx):
                 continue
-
-            content = self.translate_single_paragraph(idx, total, para)
-            self.db.update_paragraph(idx, content)
+            
+            logging.info(f"Translating paragraph {idx + 1} of {total}")
+            content = self.translate_single_paragraph(idx)
+            self.db.update_paragraph_translation(idx, content)
             logger.info(f"(Total tokens used: {self.total_tokens})")
 
-    def translate_single_paragraph(self, idx, total, para):
+    def translate_single_paragraph(self, idx):
         retry = True
         failure_iterations = 1
+        para = self.db.get_paragraph(idx)
 
         while retry:
             try:
-                logging.info(f"Translating paragraph {idx + 1} of {total}")
 
                 content, tokens_used = self.translate_endpoint(para)
                 self.total_tokens += tokens_used
@@ -109,7 +110,7 @@ class GPTTranslator:
 
             except Exception as e:
                 logger.exception(e)
-                logger.error(f"Exception. Retry with key: {idx}")
+                logger.error(f"Exception. Retry with key: {idx + 1}")
                 sleep = self.failure_sleep * failure_iterations
                 logger.info(f"Sleeping for {sleep} seconds before retrying.")
                 time.sleep(sleep)

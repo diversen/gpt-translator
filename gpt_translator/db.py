@@ -33,6 +33,15 @@ class DB:
         )
         total = cursor.fetchone()[0]
         return total > 0
+    
+    def get_paragraph(self, idx):
+        cursor = self.db.execute(
+            """
+            SELECT paragraph FROM paragraphs WHERE idx = ?
+            """,
+            (idx,),
+        )
+        return cursor.fetchone()[0]
 
     def idx_exists(self, idx):
         cursor = self.db.execute(
@@ -59,7 +68,7 @@ class DB:
         )
         self.db.commit()
 
-    def update_paragraph(self, idx, translated):
+    def update_paragraph_translation(self, idx, translated):
         self.db.execute(
             """
             UPDATE paragraphs
