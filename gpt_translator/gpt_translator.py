@@ -80,24 +80,16 @@ class GPTTranslator:
         for idx, para in enumerate(paragraphs_src):
             self.db.insert_paragraph(idx, para)
 
-        # get total count of paragraphs
         total = self.db.get_count_paragraphs()
-
-        # if all paragraphs have been translated, exit
         if self.db.all_translated():
             logger.info("All paragraphs have been translated.")
             return
 
-        # iterate all paragraphs
         for idx, para in enumerate(paragraphs_src):
-            # if paragraph has already been translated, skip
             if self.db.idx_is_translated(idx):
                 continue
 
-            # translate paragraph
             content = self.translate_single_paragraph(idx, total, para)
-
-            # save translated paragraph to database
             self.db.update_paragraph(idx, content)
             logger.info(f"(Total tokens used: {self.total_tokens})")
 
