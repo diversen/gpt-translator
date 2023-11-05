@@ -102,4 +102,15 @@ class DB:
         )
         total = cursor.fetchone()[0]
         return total == self.get_count_paragraphs()
+    
+    def get_idxs(self):
+        """
+        Get all indexes
+        """
+        cursor = self.db.execute(
+            """
+            SELECT idx FROM paragraphs
+            """
+        )
+        return [idx[0] for idx in cursor.fetchall()]
         

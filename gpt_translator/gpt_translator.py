@@ -41,6 +41,10 @@ class GPTTranslator:
         self.total_tokens = 0
         self.failure_iterations = 1
 
+        self.paragraphs_src = file_utils.file_get_src_paragraphs(
+            self.from_file, self.max_tokens_paragraph
+        )
+
         # create working directory if it doesn't exist
         if not os.path.exists(self.working_dir):
             os.makedirs(self.working_dir)
@@ -48,7 +52,12 @@ class GPTTranslator:
         # init sqlite database
         self.db = DB(self.working_dir)
 
-    def get_params(self, message):
+        # Insert all paragraphs into database that don't already exist
+        for idx, para in enumerate(self.paragraphs_src):
+            self.db.insert_paragraph(idx + 1, para)
+
+
+    def _get_params(self, message):
         message = self.prompt + message
         params = {
             "model": self.model,
@@ -60,8 +69,8 @@ class GPTTranslator:
         }
         return params
 
-    def translate_endpoint(self, message):
-        params = self.get_params(message)
+    def _translate_endpoint(self, message):
+        params = self._get_params(message)
         result = openai.ChatCompletion.create(**params)
 
         tokens_used = int(result["usage"]["total_tokens"])
@@ -71,30 +80,7 @@ class GPTTranslator:
         content = result["choices"][0]["message"]["content"]
         return content, tokens_used
 
-    def translate(self):
-        paragraphs_src = file_utils.file_get_src_paragraphs(
-            self.from_file, self.max_tokens_paragraph
-        )
-
-        # Insert all paragraphs into database that don't already exist
-        for idx, para in enumerate(paragraphs_src):
-            self.db.insert_paragraph(idx, para)
-
-        total = self.db.get_count_paragraphs()
-        if self.db.all_translated():
-            logger.info("All paragraphs have been translated.")
-            return
-
-        for idx, para in enumerate(paragraphs_src):
-            if self.db.idx_is_translated(idx):
-                continue
-            
-            logging.info(f"Translating paragraph {idx + 1} of {total}")
-            content = self.translate_single_paragraph(idx)
-            self.db.update_paragraph_translation(idx, content)
-            logger.info(f"(Total tokens used: {self.total_tokens})")
-
-    def translate_single_paragraph(self, idx):
+    def _translate_single_paragraph(self, idx):
         retry = True
         failure_iterations = 1
         para = self.db.get_paragraph(idx)
@@ -102,7 +88,7 @@ class GPTTranslator:
         while retry:
             try:
 
-                content, tokens_used = self.translate_endpoint(para)
+                content, tokens_used = self._translate_endpoint(para)
                 self.total_tokens += tokens_used
 
                 retry = False  # Translation successful, exit while-loop
@@ -115,3 +101,37 @@ class GPTTranslator:
                 logger.info(f"Sleeping for {sleep} seconds before retrying.")
                 time.sleep(sleep)
                 failure_iterations *= 2  # exponential backoff
+
+    def translate(self):
+
+        if self.db.all_translated():
+            logger.info("All paragraphs have been translated.")
+            return
+
+        total = self.db.get_count_paragraphs()
+        idxs = self.db.get_idxs()
+
+        for idx in idxs:
+
+            if self.db.idx_is_translated(idx):
+                continue
+            
+            logging.info(f"Translating paragraph {idx} of {total}")
+            content = self._translate_single_paragraph(idx)
+            self.db.update_paragraph_translation(idx, content)
+            logger.info(f"(Total tokens used: {self.total_tokens})")
+
+    def translate_idxs(self, idxs):
+        """
+        Translate a single paragraph by index.
+        """
+        for idx in idxs:
+
+            if not self.db.idx_exists(idx):
+                logger.error(f"Paragraph {idx} does not exist.")
+                continue
+
+            logging.info(f"Translating paragraph {idx}")
+            content = self._translate_single_paragraph(idx)
+            self.db.update_paragraph_translation(idx, content)
+            logger.info(f"(Total tokens used: {self.total_tokens})")
