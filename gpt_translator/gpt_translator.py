@@ -26,7 +26,7 @@ class GPTTranslator:
         temperature=0.7,
         presence_penalty=0.1,
         top_p=0.99,
-        max_tokens_paragraph=1024,
+        max_tokens=1024,
         model="gpt-3.5-turbo",
     ):
         self.prompt = prompt
@@ -36,13 +36,13 @@ class GPTTranslator:
         self.temperature = temperature
         self.presence_penalty = presence_penalty
         self.top_p = top_p
-        self.max_tokens_paragraph = max_tokens_paragraph
+        self.max_tokens = max_tokens
         self.model = model
         self.total_tokens = 0
         self.failure_iterations = 1
 
         self.paragraphs_src = file_utils.file_get_src_paragraphs(
-            self.from_file, self.max_tokens_paragraph
+            self.from_file, self.max_tokens
         )
 
         # create working directory if it doesn't exist
@@ -114,6 +114,7 @@ class GPTTranslator:
         for idx in idxs:
 
             if self.db.idx_is_translated(idx):
+                logger.info(f"Paragraph {idx} has already been translated.")
                 continue
             
             logging.info(f"Translating paragraph {idx} of {total}")
@@ -123,7 +124,7 @@ class GPTTranslator:
 
     def translate_idxs(self, idxs):
         """
-        Translate a single paragraph by index.
+        Translate paragraphs by index.
         """
         for idx in idxs:
 

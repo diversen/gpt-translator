@@ -17,14 +17,14 @@ def cli():
 @click.option('-f', '--from-file', help='Source file for translation.', required=True)
 @click.option('-p', '--prompt', help='Prompt for translation.', required=True)
 @click.option('-d', '--working-dir', default='output', help="Working directory. Default is 'output'")
-@click.option('-m', '--max-tokens-paragraph', default=1024, help='Max tokens per paragraph. Default is 1024')
+@click.option('-m', '--max-tokens', default=1024, help='Max tokens per paragraph. Default is 1024')
 @click.option('-i', '--idxs', default=None, multiple=True, type=int, help='Translate specific paragraphs by index. Default is None')
 @click.option('--failure-sleep', default=10, help='Failure sleep time. Default is 10 seconds')
 @click.option('--temperature', default=0.7, help='Temperature. Default is 0.7')
 @click.option('--presence-penalty', default=0.1, help='Presence penalty. Default is 0.1')
 @click.option('--top-p', default=0.99, help='Top P. Default is 0.99')
 @click.option('--model', default='gpt-3.5-turbo', help='Model to use. Default is gpt-3.5-turbo')
-def translate(from_file, prompt, idxs, working_dir, failure_sleep, temperature, presence_penalty, top_p, max_tokens_paragraph, model):
+def translate(from_file, prompt, idxs, working_dir, failure_sleep, temperature, presence_penalty, top_p, max_tokens, model):
     
     translator = GPTTranslator(
         from_file=from_file,
@@ -34,7 +34,7 @@ def translate(from_file, prompt, idxs, working_dir, failure_sleep, temperature, 
         temperature=temperature,
         presence_penalty=presence_penalty,
         top_p=top_p,
-        max_tokens_paragraph=max_tokens_paragraph,
+        max_tokens=max_tokens,
         model=model
     )
 

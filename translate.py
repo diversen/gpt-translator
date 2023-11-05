@@ -24,10 +24,10 @@ gpt_translate = GPTTranslator(
     prompt,
     working_dir="./output",
     model="gpt-3.5-turbo",
-    max_tokens_paragraph=512,
+    max_tokens=512,
 )
 
 gpt_translate.translate()
 
 # update by a list of idxs. Idx corresponds to the paragraph number (or database idx)
-gpt_translate.translate_idxs([2])
+# gpt_translate.translate_idxs([2])
