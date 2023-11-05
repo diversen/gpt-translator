@@ -2,8 +2,10 @@ import openai
 import time
 import logging
 import os
+
 from dotenv import load_dotenv
 from gpt_translator import file_utils
+from gpt_translator.db import DB
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -19,7 +21,7 @@ class GPTTranslator:
         self,
         from_file,
         prompt,
-        working_dir="./output",
+        working_dir="output",
         failure_sleep=10,
         temperature=0.7,
         presence_penalty=0.1,
@@ -38,6 +40,13 @@ class GPTTranslator:
         self.model = model
         self.total_tokens = 0
         self.failure_iterations = 1
+
+        # create working directory if it doesn't exist
+        if not os.path.exists(self.working_dir):
+            os.makedirs(self.working_dir)
+
+        # init sqlite database
+        self.db = DB(self.working_dir)
 
     def get_params(self, message):
         message = self.prompt + message
@@ -63,31 +72,33 @@ class GPTTranslator:
         return content, tokens_used
 
     def translate(self):
-        paragraphs = file_utils.file_get_paragraphs(
+        paragraphs_src = file_utils.file_get_src_paragraphs(
             self.from_file, self.max_tokens_paragraph
         )
 
-        file_utils.save_markdown(self.working_dir, paragraphs)
-        paragraphs_translated = file_utils.get_paragraphs(self.working_dir)
+        # Insert all paragraphs into database that don't already exist
+        for idx, para in enumerate(paragraphs_src):
+            self.db.insert_paragraph(idx, para)
 
-        position = len(paragraphs_translated)
-        total = len(paragraphs)
+        # get total count of paragraphs
+        total = self.db.get_count_paragraphs()
 
-        if position == total:
+        # if all paragraphs have been translated, exit
+        if self.db.all_translated():
             logger.info("All paragraphs have been translated.")
             return
 
-        for idx, para in enumerate(paragraphs[position:], position):
+        # iterate all paragraphs
+        for idx, para in enumerate(paragraphs_src):
+            # if paragraph has already been translated, skip
+            if self.db.idx_is_translated(idx):
+                continue
 
-            logging.info(f"Total paragraphs to translate: {total}")
-            logging.info(f"Starting from paragraph: {position + 1}")
-
+            # translate paragraph
             content = self.translate_single_paragraph(idx, total, para)
-            paragraphs_translated.append(content.strip())
 
-            file_utils.save_markdown(self.working_dir, paragraphs_translated)
-            file_utils.save_json(self.working_dir, paragraphs_translated)
-
+            # save translated paragraph to database
+            self.db.update_paragraph(idx, content)
             logger.info(f"(Total tokens used: {self.total_tokens})")
 
     def translate_single_paragraph(self, idx, total, para):

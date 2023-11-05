@@ -4,8 +4,19 @@ import logging
 # set logging level
 logging.basicConfig(level=logging.INFO)
 
-prompt = """Translate the following two scenes from Hamlet by Shakespeare 
-to a modern version so that it is easier to understand. It should be as simple as possible, but no simpler. """
+prompt = """Objective: Translate a passage from Shakespeare's 'Hamlet' into contemporary English that is engaging and clear for toda
+y's readers. Don't translate what makes sense to modern readers. Don't make any meta-comments about the translation.
+
+Keep the formatting: Translate line by line. Each line in the input should correspond to a single line in the output. A
+single line is defined as some text that ends with a newline character. Never combine two lines into one. Never split a
+single line into two. Translate each line independently.
+
+The translated text should have the same number of lines as the input text.
+
+Markdown: Input is markdown. Output should also be markdown. Always keep the markdown formatting from the input. E.g. al
+l lines in the dialogs begins with '> '. And also any headings, lists, etc.
+
+Here is the original text you will translate:"""
 
 # Initialize the GPTTranslate class and call the translate method
 gpt_translate = GPTTranslator(

@@ -5,8 +5,6 @@ import tiktoken
 import logging
 
 
-tmp_file = "tmp_file"
-
 # log to stdout
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.StreamHandler())
@@ -22,7 +20,7 @@ def count_tokens(string: str) -> int:
     return num_tokens
 
 
-def file_get_paragraphs(filename, max_tokens_paragraph):
+def file_get_src_paragraphs(filename, max_tokens_paragraph):
     """
     Clean up a bit of text and return a list of paragraphs as a list of strings.
     """
@@ -44,38 +42,6 @@ def file_get_paragraphs(filename, max_tokens_paragraph):
 
     # Trim
     paragraphs = [para.strip() for para in paragraphs if para.strip()]
-
-    return paragraphs
-
-
-def save_markdown(working_dir, paragraphs):
-    if not os.path.exists(working_dir):
-        os.makedirs(working_dir)
-
-    save_file = os.path.join(working_dir, tmp_file + ".txt")
-    with open(save_file, "w") as file:
-        file.write("\n\n".join(paragraphs))
-
-
-def save_json(working_dir, paragraphs):
-    if not os.path.exists(working_dir):
-        os.makedirs(working_dir)
-
-    save_file = os.path.join(working_dir, tmp_file + ".json")
-    with open(save_file, "w") as file:
-        json.dump(paragraphs, file, indent=4, ensure_ascii=False)
-
-
-def get_paragraphs(working_dir):
-    json_file = os.path.join(working_dir, tmp_file + ".json")
-    if not os.path.exists(json_file):
-        return []
-
-    try:
-        with open(json_file, "r") as file:
-            paragraphs = json.load(file)
-    except json.decoder.JSONDecodeError:
-        paragraphs = []
 
     return paragraphs
 
@@ -109,7 +75,7 @@ def _expand_paragraphs(paragraphs, max_tokens_paragraph):
 
 
 def cleanup(directory):
-    files_to_remove = [tmp_file + ".txt", tmp_file + ".json", tmp_file + ".txt"]
+    files_to_remove = ["translation.db"]
 
     for filename in files_to_remove:
         file_path = os.path.join(directory, filename)
