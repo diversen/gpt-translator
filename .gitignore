@@ -2,3 +2,4 @@ prompt.md
 venv
 __pycache__
 .env
+translation.db
