@@ -1,8 +1,10 @@
 import click
 from gpt_translator.gpt_translator import GPTTranslator
 from gpt_translator import file_utils
+from gpt_translator import __version__
 import logging
 import os
+
 
 # set logging level
 logging.basicConfig(level=logging.INFO)
@@ -44,6 +46,13 @@ def cleanup(working_dir):
         file_utils.cleanup(working_dir)
 
 cli.add_command(cleanup)
+
+@click.command()
+def version():
+    print(__version__)
+    exit(0)
+
+cli.add_command(version)
 
 if __name__ == '__main__':
     cli()
