@@ -113,4 +113,19 @@ class DB:
             """
         )
         return [idx[0] for idx in cursor.fetchall()]
+    
+    def get_all_rows(self):
+
+        # set connection to associate rows with columns
+        self.db.row_factory = sqlite3.Row
+        """
+        Get all rows
+        """
+        cursor = self.db.execute(
+            """
+            SELECT * FROM paragraphs
+            """
+        )
+        
+        return cursor.fetchall()
         

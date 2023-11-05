@@ -106,21 +106,25 @@ class GPTTranslator:
 
         if self.db.all_translated():
             logger.info("All paragraphs have been translated.")
-            return
-
-        total = self.db.get_count_paragraphs()
-        idxs = self.db.get_idxs()
-
-        for idx in idxs:
-
-            if self.db.idx_is_translated(idx):
-                logger.info(f"Paragraph {idx} has already been translated.")
-                continue
             
-            logging.info(f"Translating paragraph {idx} of {total}")
-            content = self._translate_single_paragraph(idx)
-            self.db.update_paragraph_translation(idx, content)
-            logger.info(f"(Total tokens used: {self.total_tokens})")
+        else:
+
+            total = self.db.get_count_paragraphs()
+            idxs = self.db.get_idxs()
+
+            for idx in idxs:
+
+                if self.db.idx_is_translated(idx):
+                    logger.info(f"Paragraph {idx} has already been translated.")
+                    continue
+                
+                logging.info(f"Translating paragraph {idx} of {total}")
+                content = self._translate_single_paragraph(idx)
+                self.db.update_paragraph_translation(idx, content)
+                logger.info(f"(Total tokens used: {self.total_tokens})")
+
+        self.export()
+
 
     def translate_idxs(self, idxs):
         """
@@ -136,3 +140,25 @@ class GPTTranslator:
             content = self._translate_single_paragraph(idx)
             self.db.update_paragraph_translation(idx, content)
             logger.info(f"(Total tokens used: {self.total_tokens})")
+
+        self.export()
+
+    def export(self):
+        """
+        Export translated paragraphs to file.
+        """
+
+        # generate filename from source filename
+        filename = os.path.basename(self.from_file)
+        
+        # get extension
+        filename, ext = os.path.splitext(filename)
+
+        # append _translated to filename
+        filename = filename + "_translated" + ext
+
+        # get output_dir + filename
+        filename = os.path.join(self.working_dir, filename)
+        
+        paragraphs = self.db.get_all_rows()
+        file_utils.file_put_paragraphs(filename, paragraphs)

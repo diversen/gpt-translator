@@ -65,13 +65,15 @@ Translate a text file (markdown in this case):
 gpt-translator translate -f output/hamlet_part.md -p "Translate the following two scenes from Hamlet by Shakespeare to a modern version so that it is easier to understand. It should be as simple as possible, but no simpler."
 ```
 
+The translation will be placed in the `output` directory. In this case the translated text will be placed in a file named `hamlet_part_translated.md`.
+
 Update a translation by idxs:
 
 ```bash
 gpt-translator translate -f output/hamlet_part.md --prompt "Please translate a part of Hamlet to Sindarin (Tolkien dialect). Here is the text you should translate: " --idxs 1 --idxs 2
 ```
 
-Remove translations from database:
+Remove database:
 
 ```bash
 gpt-translator cleanup

@@ -74,6 +74,17 @@ def _expand_paragraphs(paragraphs, max_tokens_paragraph):
     return new_paragraphs
 
 
+def file_put_paragraphs(filename, paragraphs):
+
+    if os.path.exists(filename):
+        os.remove(filename)
+    
+    for paragraph in paragraphs:
+        paragraph_dict = dict(paragraph)
+        with open(filename, "a") as file:
+            file.write(paragraph_dict["translated"] + "\n\n")
+
+
 def cleanup(directory):
     files_to_remove = ["translation.db"]
 
