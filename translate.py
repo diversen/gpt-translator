@@ -28,3 +28,6 @@ gpt_translate = GPTTranslator(
 )
 
 gpt_translate.translate()
+
+# update by a list of idxs. Idx corresponds to the paragraph number (or database idx)
+gpt_translate.translate_idxs([2])

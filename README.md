@@ -10,12 +10,15 @@ Examle usage:
 How It Works:
 
 The text is divided into sections, separated by two or more newlines.
-A paragraph is a collection of sections, with a default size limit of max 1024 tokens.
+A paragraph is a collection of sections, with a default size limit of e.g. 1024 tokens.
 
 Set a custom token limit for paragraphs with `--max-tokens-paragraph`.
 Adjust the wait time after errors using `--failure-sleep`. The wait time doubles with each consecutive error, starting from 10 seconds.
 
 Output is saved to `output` dir, which is created if it does not exist. This can be changed setting the `--working-dir`. Default output translation file is `output/output.md`.
+
+Each paragraph is translated using the OpenAI API. The original text and the translated text is
+inserted into a sqlite3 database.
 
 ### Usage
 
@@ -51,6 +54,8 @@ gpt-translator translate --help
     -d, --working-dir TEXT          Working directory. Default is 'output'
     -m, --max-tokens-paragraph INTEGER
                                     Max tokens per paragraph. Default is 1024
+    -i, --idxs INTEGER              Translate specific paragraphs by index.
+                                    Default is None
     --failure-sleep INTEGER         Failure sleep time. Default is 10 seconds
     --temperature FLOAT             Temperature. Default is 0.7
     --presence-penalty FLOAT        Presence penalty. Default is 0.1
@@ -60,14 +65,19 @@ gpt-translator translate --help
 
 Example: 
 
+Translate a text file (markdown in this case):
+
 ```bash
 gpt-translator translate -f output/hamlet_part.md -p "Translate the following two scenes from Hamlet by Shakespeare to a modern version so that it is easier to understand. It should be as simple as possible, but no simpler."
-
 ```
 
-The output file is saved to `output` dir, which is 
+Update a translation by idxs:
 
-Cleanup output:
+```bash
+gpt-translator translate -f output/hamlet_part.md --prompt "Please translate a part of Hamlet to Sindarin (Tolkien dialect). Here is the text you should translate: " --idxs 1 --idxs 2
+```
+
+Remove translations from database:
 
 ```bash
 gpt-translator cleanup
