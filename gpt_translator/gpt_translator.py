@@ -56,7 +56,6 @@ class GPTTranslator:
         for idx, para in enumerate(self.paragraphs_src):
             self.db.insert_paragraph(idx + 1, para)
 
-
     def _get_params(self, message):
         message = self.prompt + message
         params = {
@@ -81,43 +80,38 @@ class GPTTranslator:
         return content, tokens_used
 
     def _translate_single_paragraph(self, idx):
-        retry = True
         failure_iterations = 1
         para = self.db.get_paragraph(idx)
 
-        while retry:
+        while True:
             try:
-
                 content, tokens_used = self._translate_endpoint(para)
                 self.total_tokens += tokens_used
-
-                retry = False  # Translation successful, exit while-loop
                 return content
 
             except Exception as e:
                 logger.exception(e)
                 logger.error(f"Exception. Retry with key: {idx + 1}")
+
                 sleep = self.failure_sleep * failure_iterations
                 logger.info(f"Sleeping for {sleep} seconds before retrying.")
                 time.sleep(sleep)
+
                 failure_iterations *= 2  # exponential backoff
 
     def translate(self):
-
         if self.db.all_translated():
             logger.info("All paragraphs have been translated.")
-            
-        else:
 
+        else:
             total = self.db.get_count_paragraphs()
             idxs = self.db.get_idxs()
 
             for idx in idxs:
-
                 if self.db.idx_is_translated(idx):
                     logger.info(f"Paragraph {idx} has already been translated.")
                     continue
-                
+
                 logging.info(f"Translating paragraph {idx} of {total}")
                 content = self._translate_single_paragraph(idx)
                 self.db.update_paragraph_translation(idx, content)
@@ -125,13 +119,11 @@ class GPTTranslator:
 
         self.export()
 
-
     def translate_idxs(self, idxs):
         """
         Translate paragraphs by index.
         """
         for idx in idxs:
-
             if not self.db.idx_exists(idx):
                 logger.error(f"Paragraph {idx} does not exist.")
                 continue
@@ -150,7 +142,7 @@ class GPTTranslator:
 
         # generate filename from source filename
         filename = os.path.basename(self.from_file)
-        
+
         # get extension
         filename, ext = os.path.splitext(filename)
 
@@ -159,6 +151,6 @@ class GPTTranslator:
 
         # get output_dir + filename
         filename = os.path.join(self.working_dir, filename)
-        
+
         paragraphs = self.db.get_all_rows()
         file_utils.file_put_paragraphs(filename, paragraphs)
