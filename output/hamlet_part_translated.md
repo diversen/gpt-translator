@@ -12,7 +12,7 @@
 
 **FRANCISCO**
 
-> No, answer me: stop and reveal yourself.  
+> No, tell me: stop, and reveal yourself.  
 
 **BERNARDO**
 
@@ -28,20 +28,20 @@
 
 **FRANCISCO**
 
-> You arrive most punctually.  
+> You come most punctually at your scheduled time.  
 
 **BERNARDO**
 
-> It is now midnight; go to bed, Francisco.  
+> It is now twelve o'clock; go to bed, Francisco.  
 
 **FRANCISCO**
 
-> Thank you for this break; it's bitterly cold,  
+> I am very grateful for this relief: it's bitterly cold,  
 > And I am sick at heart.  
 
 **BERNARDO**
 
-> Have you had a quiet watch?  
+> Have you had a peaceful watch?  
 
 **FRANCISCO**
 
@@ -50,12 +50,12 @@
 **BERNARDO**
 
 > Well, good night.  
-> If you come across Horatio and Marcellus,  
-> The others on watch with me, tell them to hurry.  
+> If you happen to meet Horatio and Marcellus,  
+> The companions of my watch, tell them to hurry.  
 
 **FRANCISCO**
 
-> I think I hear them. Stand, ho! Who's there?  
+> I think I hear them. Stop, who's there?  
 > 
 > _Enter HORATIO and MARCELLUS_
 
@@ -65,7 +65,7 @@
 
 **MARCELLUS**
 
-> And loyal to the Danish king.  
+> And loyal to the Danish ruler.  
 
 **FRANCISCO**
 
@@ -73,8 +73,8 @@
 
 **MARCELLUS**
 
-> Farewell, honest soldier:  
-> Who has relieved you?  
+> Oh, farewell, honest soldier:  
+> Who has taken over your post?  
 
 **FRANCISCO**
 
@@ -94,7 +94,7 @@
 
 **HORATIO**
 
-> Only a part of him.  
+> A part of him.  
 
 **BERNARDO**
 
@@ -106,119 +106,119 @@
 
 **BERNARDO**
 
-> I haven't seen anything.  
+> I have seen nothing.  
 
 **MARCELLUS**
 
-> Horatio says it's just our imagination,  
-> And he won't believe in this feared sight  
-> That we've seen twice before:  
-> So I've asked him to join us  
-> To watch the minutes of this night;  
-> So that if this apparition appears again,  
+> Horatio says it is just our imagination,  
+> And he will not believe in this feared sight  
+> That we have seen twice:  
+> Therefore I have asked him  
+> To stay with us and watch the minutes of this night;  
+> So that if this apparition comes again,  
 > He can confirm what we see and speak to it.
 
 **HORATIO**
 
-> Pfft, pfft, it won't show up.
+> Come on, come on, it won't show itself.  
 
 **BERNARDO**
 
-> Sit down for a while;
-> And let us once again tell you the story,
-> That you are so resistant to hearing,
-> What we saw two nights ago.
+> Sit down for a moment;  
+> And let us once again tell you the story,  
+> That you are so closed off to hearing  
+> What we saw two nights ago.  
 
 **HORATIO**
 
-> Well, let's sit down,
-> And let us hear Bernardo tell about this.
+> Well, let's sit down,  
+> And let us hear Bernardo speak about this.  
 
 **BERNARDO**
 
-> Last night,
-> When that same star in the west
-> Had finished its journey to light up that part of the sky
-> Where it is now shining, Marcellus and I,
-> The clock then struck one,
+> Last night,  
+> When that same star in the west  
+> Had completed its journey to light up that part of the sky  
+> Where it now burns, Marcellus and I,  
+> The bell then striking one,--  
 > 
 > _Enter Ghost_
 
 **MARCELLUS**
 
-> Quiet, stop talking; look, there it comes again!
+> Quiet, stop talking; look, it's coming again!  
 
 **BERNARDO**
 
-> In the same form, like the dead king.
+> In the same shape, like the dead king.  
 
 **MARCELLUS**
 
-> You are a scholar; speak to it, Horatio.
+> You are a scholar; speak to it, Horatio.  
 
 **BERNARDO**
 
-> Doesn't it look like the king? Look at it, Horatio.
+> Doesn't it look like the king? Look at it, Horatio.  
 
 **HORATIO**
 
-> Most likely: it fills me with fear and wonder.
+> Most likely: it fills me with fear and wonder.  
 
 **BERNARDO**
 
-> It wants to be spoken to.
+> It wants to be spoken to.  
 
 **MARCELLUS**
 
-> Question it, Horatio.
+> Ask it a question, Horatio.  
 
 **HORATIO**
 
-> Who are you that appear at this time of night,
-> With that noble and warlike appearance,
-> In which the greatness of buried Denmark
-> Once marched? I swear to you by God, speak!
+> Who are you that appears at this time of night,  
+> Along with that noble and warrior-like figure  
+> In which the greatness of buried Denmark  
+> Used to march? I swear by heaven, speak!  
 
 **MARCELLUS**
 
-> It is offended.
+> It is offended.  
 
 **BERNARDO**
 
-> Look, it's walking away!
+> Look, it's walking away!  
 
 **HORATIO**
 
-> Wait! Speak, speak! I command you, speak!
+> Wait! Speak, speak! I command you, speak!  
 > 
 > _Exit Ghost_
 
 **MARCELLUS**
 
-> It's gone, and won't answer.
+> It's gone, and won't respond.  
 
 **BERNARDO**
 
-> What's wrong, Horatio! You're trembling and pale:
-> Isn't this something more than just imagination?
-> What do you think?
+> What's the matter, Horatio! You're trembling and pale:  
+> Isn't this something more than fantasy?  
+> What do you think of it?  
 
 **HORATIO**
 
-> I swear to God, I wouldn't have believed it
-> Without seeing it with my own eyes,
-> And having proof that it's true.
+> Before God, I couldn't believe this  
+> Without the clear and true evidence  
+> Of my own eyes.  
 
 **MARCELLUS**
 
-> Isn't it like the king?
+> Isn't it like the king?  
 
 **HORATIO**
 
-> Just as you are to yourself:
-> He was wearing the exact same armor
-> When he fought against ambitious Norway;
-> He frowned like that once, when, in an angry dispute,
-> He attacked the Polish invaders on the ice.
+> Just as you are to yourself:  
+> That was the exact armor he wore  
+> When he fought against ambitious Norway;  
+> He frowned like that once, when, in an angry dispute,  
+> He struck the sledded Polacks on the ice.  
 > It's strange.
 
