@@ -114,7 +114,7 @@ class DB:
         )
         return [idx[0] for idx in cursor.fetchall()]
     
-    def get_all_rows(self):
+    def get_all_rows(self) -> list:
 
         # set connection to associate rows with columns
         self.db.row_factory = sqlite3.Row
@@ -127,5 +127,6 @@ class DB:
             """
         )
         
-        return cursor.fetchall()
+        rows = [dict(row) for row in cursor.fetchall()]
+        return rows
         
