@@ -55,6 +55,8 @@ gpt-translator translate --help
     --presence-penalty FLOAT  Presence penalty. Default is 0.1
     --top-p FLOAT             Top P. Default is 0.99
     --model TEXT              Model to use. Default is gpt-3.5-turbo
+    --separator BOOLEAN       When exporting text, include part separator.
+                                Default is False
     --help                    Show this message and exit.
 
 Example: 
@@ -70,7 +72,7 @@ The translation will be placed in the `output` directory. In this case the trans
 Update a translation by idxs:
 
 ```bash
-gpt-translator translate -f input/hamlet_part.md --prompt "Please translate a part of Hamlet to Sindarin (Tolkien dialect). Here is the text you should translate: " --idxs 2
+gpt-translator translate -f input/hamlet_part.md --separator true --prompt  "Please translate a part of Hamlet to Sindarin (Tolkien dialect). Here is the text you should translate: " --idxs 2
 ```
 
 Remove database:
