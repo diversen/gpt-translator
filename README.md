@@ -36,7 +36,7 @@ OPENAI_API_KEY=your-api-key
 Install latest version using pipx
 
 <!-- LATEST-VERSION-PIPX -->
-	pipx install git+https://github.com/diversen/gpt-translator@v0.2.4
+	pipx install git+https://github.com/diversen/gpt-translator@v0.2.5
 
 ```bash
 gpt-translator translate --help
@@ -84,7 +84,7 @@ gpt-translator cleanup
 ### Usage as requirement
 
 <!-- LATEST-VERSION-PIP -->
-	pip install git+https://github.com/diversen/gpt-translator@v0.2.4
+	pip install git+https://github.com/diversen/gpt-translator@v0.2.5
 
 For usage see [translate.py](translate.py)
 
