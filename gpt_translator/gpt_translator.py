@@ -91,7 +91,7 @@ class GPTTranslator:
 
             except Exception as e:
                 logger.exception(e)
-                logger.error(f"Exception. Retry with key: {idx + 1}")
+                logger.error(f"Exception. Retry with key: {idx}")
 
                 sleep = self.failure_sleep * failure_iterations
                 logger.info(f"Sleeping for {sleep} seconds before retrying.")
