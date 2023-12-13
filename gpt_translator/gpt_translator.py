@@ -28,6 +28,7 @@ class GPTTranslator:
         top_p=0.99,
         max_tokens=1024,
         model="gpt-3.5-turbo",
+        part_separator=False,
     ):
         self.prompt = prompt
         self.failure_sleep = failure_sleep
@@ -38,6 +39,8 @@ class GPTTranslator:
         self.top_p = top_p
         self.max_tokens = max_tokens
         self.model = model
+        self.part_separator = part_separator
+
         self.total_tokens = 0
         self.failure_iterations = 1
 
@@ -55,6 +58,8 @@ class GPTTranslator:
         # Insert all paragraphs into database that don't already exist
         for idx, para in enumerate(self.paragraphs_src):
             self.db.insert_paragraph(idx + 1, para)
+
+        self._export_source()
 
     def _get_params(self, message):
         message = self.prompt + message
@@ -102,7 +107,7 @@ class GPTTranslator:
     def translate(self):
         if self.db.all_translated():
             logger.info("All paragraphs have been translated.")
-            self.export()
+            self._export_translated()
 
         else:
             total = self.db.get_count_paragraphs()
@@ -117,7 +122,7 @@ class GPTTranslator:
                     self.db.update_paragraph_translation(idx, content)
                     logger.info(f"(Total tokens used: {self.total_tokens})")
 
-                    self.export()
+                    self._export_translated()
 
     def translate_idxs(self, idxs):
         """
@@ -131,26 +136,40 @@ class GPTTranslator:
                 content = self._translate_single_paragraph(idx)
                 self.db.update_paragraph_translation(idx, content)
                 logger.info(f"(Total tokens used: {self.total_tokens})")
+                self._export_translated()
 
-                self.export()
-
-    def export(self):
-        """
-        Export translated paragraphs to file.
-        """
-
+    def _get_export_filename(self, file_prefix=""):
         # generate filename from source filename
         filename = os.path.basename(self.from_file)
-
-        # get extension
         filename, ext = os.path.splitext(filename)
-
-        # append _translated to filename
-        filename = filename + "_translated" + ext
-
-        # get output_dir + filename
+        filename = f"{filename}_{file_prefix}{ext}"
         filename = os.path.join(self.working_dir, filename)
 
+        return filename
+
+    def _export_translated(self):
+        """
+        Export translated paragraphs to a file.
+        """
+        filename = self._get_export_filename("translated")
         paragraphs = self.db.get_all_rows()
 
-        file_utils.file_put_paragraphs(filename, paragraphs)
+        export_paragraphs = []
+        for para in paragraphs:
+            if para["translated"]:
+                export_paragraphs.append(para["translated"])
+
+        file_utils.file_put_paragraphs(filename, export_paragraphs, self.part_separator)
+
+    def _export_source(self):
+        """
+        Export source paragraphs to a file.
+        """
+        filename = self._get_export_filename("source")
+        paragraphs = self.db.get_all_rows()
+
+        source_paragraphs = []
+        for para in paragraphs:
+            source_paragraphs.append(para["paragraph"])
+
+        file_utils.file_put_paragraphs(filename, source_paragraphs, self.part_separator)

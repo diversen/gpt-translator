@@ -70,14 +70,17 @@ def _expand_paragraphs(paragraphs, max_tokens_paragraph):
     return new_paragraphs
 
 
-def file_put_paragraphs(filename, paragraphs):
+def file_put_paragraphs(filename, paragraphs, part_separator=False):
     if os.path.exists(filename):
         os.remove(filename)
 
+    idx = 1
     for paragraph in paragraphs:
         with open(filename, "a") as file:
-            if paragraph["translated"]:
-                file.write(paragraph["translated"] + "\n\n")
+            if part_separator:
+                file.write(f"[Part {idx}]\n\n")
+            file.write(paragraph + "\n\n")
+        idx += 1
 
 
 def cleanup(directory):

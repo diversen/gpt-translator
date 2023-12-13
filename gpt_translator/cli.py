@@ -26,7 +26,8 @@ def cli():
 @click.option('--presence-penalty', default=0.1, help='Presence penalty. Default is 0.1')
 @click.option('--top-p', default=0.99, help='Top P. Default is 0.99')
 @click.option('--model', default='gpt-3.5-turbo', help='Model to use. Default is gpt-3.5-turbo')
-def translate(from_file, prompt, idxs, working_dir, failure_sleep, temperature, presence_penalty, top_p, max_tokens, model):
+@click.option('--separator', default=False, help='When exporting text, include part separator. Default is False')
+def translate(from_file, prompt, idxs, working_dir, failure_sleep, temperature, presence_penalty, top_p, max_tokens, model, separator):
 
     translator = GPTTranslator(
         from_file=from_file,
@@ -37,7 +38,8 @@ def translate(from_file, prompt, idxs, working_dir, failure_sleep, temperature, 
         presence_penalty=presence_penalty,
         top_p=top_p,
         max_tokens=max_tokens,
-        model=model
+        model=model,
+        part_separator=separator,
     )
 
     if idxs:
