@@ -1,4 +1,4 @@
-# The Tragedy of Hamlet, Prince of Denmark
+Objective: Translate a selected passage from Shakespeare's 'Hamlet' into modern English.
 
 ### ACT I
 
@@ -28,16 +28,16 @@
 
 **FRANCISCO**
 
-> You come most punctually at your scheduled time.  
+> You've arrived just in time.  
 
 **BERNARDO**
 
-> It is now twelve o'clock; go to bed, Francisco.  
+> It's now midnight; go to bed, Francisco.  
 
 **FRANCISCO**
 
-> I am very grateful for this relief: it's bitterly cold,  
-> And I am sick at heart.  
+> Thanks for this break; it's freezing cold,  
+> And I'm feeling sick.  
 
 **BERNARDO**
 
@@ -45,27 +45,27 @@
 
 **FRANCISCO**
 
-> Not a mouse is stirring.  
+> Not a sound from anyone.  
 
 **BERNARDO**
 
 > Well, good night.  
-> If you happen to meet Horatio and Marcellus,  
-> The companions of my watch, tell them to hurry.  
+> If you run into Horatio and Marcellus,  
+> The ones who relieve me, tell them to hurry.  
 
 **FRANCISCO**
 
-> I think I hear them. Stop, who's there?  
+> I think I hear them. Wait! Who's there?  
 > 
 > _Enter HORATIO and MARCELLUS_
 
 **HORATIO**
 
-> Friends of this place.  
+> We're friends of this place.  
 
 **MARCELLUS**
 
-> And loyal to the Danish ruler.  
+> And loyal to the Danish king.  
 
 **FRANCISCO**
 
@@ -73,8 +73,8 @@
 
 **MARCELLUS**
 
-> Oh, farewell, honest soldier:  
-> Who has taken over your post?  
+> Oh, goodbye, honest soldier:  
+> Who has replaced you?  
 
 **FRANCISCO**
 
@@ -85,7 +85,7 @@
 
 **MARCELLUS**
 
-> Hey! Bernardo!  
+> Hello! Bernardo!  
 
 **BERNARDO**
 
@@ -106,119 +106,139 @@
 
 **BERNARDO**
 
-> I have seen nothing.  
+> I haven't seen anything.  
 
 **MARCELLUS**
 
-> Horatio says it is just our imagination,  
-> And he will not believe in this feared sight  
-> That we have seen twice:  
-> Therefore I have asked him  
-> To stay with us and watch the minutes of this night;  
-> So that if this apparition comes again,  
-> He can confirm what we see and speak to it.
+Objective: Translate a selected passage from Shakespeare's 'Hamlet' into modern English.
+
+> Horatio says it's just our imagination,
+> And he won't let himself believe
+> In this terrifying sight we've seen twice.
+> That's why I've asked him to come with us
+> To watch the events of this night,
+> So that if this ghost appears again,
+> He can confirm what we see and talk to it.
 
 **HORATIO**
 
-> Come on, come on, it won't show itself.  
+> Pff, pff, it won't appear.
 
 **BERNARDO**
 
-> Sit down for a moment;  
-> And let us once again tell you the story,  
-> That you are so closed off to hearing  
-> What we saw two nights ago.  
+> Sit down for a moment;
+> And let us once again tell you our story,
+> Which you are so skeptical about,
+> What we saw on two nights.
 
 **HORATIO**
 
-> Well, let's sit down,  
-> And let us hear Bernardo speak about this.  
+> Well, let's sit down,
+> And let us hear Bernardo talk about this.
 
 **BERNARDO**
 
-> Last night,  
-> When that same star in the west  
-> Had completed its journey to light up that part of the sky  
-> Where it now burns, Marcellus and I,  
-> The bell then striking one,--  
+> Last night,
+> When that same star in the west
+> Had finished its course to light up that part of the sky
+> Where it now burns, Marcellus and I,
+> When the clock struck one,--
 > 
 > _Enter Ghost_
 
 **MARCELLUS**
 
-> Quiet, stop talking; look, it's coming again!  
+> Quiet, stop talking; look, it's coming again!
 
 **BERNARDO**
 
-> In the same shape, like the dead king.  
+> In the same form, like the dead king.
 
 **MARCELLUS**
 
-> You are a scholar; speak to it, Horatio.  
+> You're a scholar; speak to it, Horatio.
 
 **BERNARDO**
 
-> Doesn't it look like the king? Look at it, Horatio.  
+> Doesn't it look like the king? Look at it, Horatio.
 
 **HORATIO**
 
-> Most likely: it fills me with fear and wonder.  
+> Most likely: it terrifies me with fear and wonder.
 
 **BERNARDO**
 
-> It wants to be spoken to.  
+> It wants to be spoken to.
 
 **MARCELLUS**
 
-> Ask it a question, Horatio.  
+> Question it, Horatio.
 
 **HORATIO**
 
-> Who are you that appears at this time of night,  
-> Along with that noble and warrior-like figure  
-> In which the greatness of buried Denmark  
-> Used to march? I swear by heaven, speak!  
+> Who are you that appears at this time of night,
+> In the appearance of the majestic form
+> In which the late king of Denmark used to march?
+> By heaven, I command you, speak!
 
 **MARCELLUS**
 
-> It is offended.  
+> It is offended.
 
 **BERNARDO**
 
-> Look, it's walking away!  
+> Look, it's walking away!
 
 **HORATIO**
 
-> Wait! Speak, speak! I command you, speak!  
+> Wait! Speak, speak! I command you, speak!
 > 
 > _Exit Ghost_
 
 **MARCELLUS**
 
-> It's gone, and won't respond.  
+> It's gone, and it won't answer.
 
 **BERNARDO**
 
-> What's the matter, Horatio! You're trembling and pale:  
-> Isn't this something more than fantasy?  
-> What do you think of it?  
+> HORATIO: 
+> Hey Horatio, you're shaking and looking pale. 
+> Isn't this something more than just imagination? 
+> What do you think about it?
 
-**HORATIO**
+**HORATIO**: 
+> I swear to God, I wouldn't believe this 
+> Without seeing it with my own eyes. 
 
-> Before God, I couldn't believe this  
-> Without the clear and true evidence  
-> Of my own eyes.  
+**MARCELLUS**: 
+> Doesn't he look like the king?
 
-**MARCELLUS**
-
-> Isn't it like the king?  
-
-**HORATIO**
-
-> Just as you are to yourself:  
-> That was the exact armor he wore  
-> When he fought against ambitious Norway;  
-> He frowned like that once, when, in an angry dispute,  
-> He struck the sledded Polacks on the ice.  
+**HORATIO**: 
+> Just like you look like yourself. 
+> He's wearing the same armor 
+> That he wore when he fought against Norway; 
+> He frowned like this once before, 
+> When he struck the Polish soldiers on the ice. 
 > It's strange.
+
+**MARCELLUS**: 
+> This has happened twice before, at this same hour, 
+> He's walked by our guard with a military stride.
+
+**HORATIO**: 
+> I don't know what he's thinking specifically, 
+> But overall, in my opinion, 
+> This is a sign of some strange disruption in our state.
+
+**MARCELLUS**: 
+> Come on, sit down and tell me, you who knows, 
+> Why this strict and vigilant watch 
+> Works tirelessly every night for the sake of the kingdom, 
+> And why there are daily inspections of weapons, 
+> And a constant flow of foreign supplies for war. 
+> Why there are so many shipbuilders, 
+> Who don't even take Sundays off from their hard work. 
+> What's going on, that this sweaty haste 
+> Makes the night work as hard as the day? 
+> Who can tell me?
 

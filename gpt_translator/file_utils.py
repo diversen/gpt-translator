@@ -50,26 +50,23 @@ def _expand_paragraphs(paragraphs, max_tokens_paragraph):
     Expand paragraphs to a maximum number of words per paragraph.
     """
     new_paragraphs = []
-    new_paragraph = ""
+    current_chunk = ""
 
     for paragraph in paragraphs:
-        token_count = count_tokens(paragraph)
-        if token_count > max_tokens_paragraph:
+        if count_tokens(paragraph) > max_tokens_paragraph:
             raise Exception(
-                f"Paragraph contains {token_count} tokens, which is more than the maximum of {max_tokens_paragraph} tokens per paragraph."
+                f"Paragraph exceeds the maximum of {max_tokens_paragraph} tokens."
             )
 
-    for paragraph in paragraphs:
-        token_count = count_tokens(paragraph)
-        if token_count > max_tokens_paragraph:
-            raise Exception(
-                f"Paragraph contains {token_count} tokens, which is more than the maximum of {max_tokens_paragraph} tokens per paragraph."
-            )
+        if count_tokens(current_chunk + paragraph) > max_tokens_paragraph:
+            new_paragraphs.append(current_chunk.strip())
+            current_chunk = ""
 
-        new_paragraph += paragraph + "\n\n"
-        if count_tokens(new_paragraph) > max_tokens_paragraph:
-            new_paragraphs.append(new_paragraph)
-            new_paragraph = ""
+        current_chunk += paragraph + "\n\n"
+
+    if current_chunk.strip():
+        new_paragraphs.append(current_chunk.strip())
+
     return new_paragraphs
 
 
