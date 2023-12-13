@@ -1,3 +1,5 @@
+[Part 1]
+
 Objective: Translate a selected passage from Shakespeare's 'Hamlet' into modern English.
 
 ### ACT I
@@ -12,7 +14,7 @@ Objective: Translate a selected passage from Shakespeare's 'Hamlet' into modern 
 
 **FRANCISCO**
 
-> No, tell me: stop, and reveal yourself.  
+> No, tell me: stop and show yourself.  
 
 **BERNARDO**
 
@@ -28,40 +30,40 @@ Objective: Translate a selected passage from Shakespeare's 'Hamlet' into modern 
 
 **FRANCISCO**
 
-> You've arrived just in time.  
+> You arrived just in time.  
 
 **BERNARDO**
 
-> It's now midnight; go to bed, Francisco.  
+> It's now twelve o'clock; go to bed, Francisco.  
 
 **FRANCISCO**
 
 > Thanks for this break; it's freezing cold,  
-> And I'm feeling sick.  
+> And I feel sick at heart.  
 
 **BERNARDO**
 
-> Have you had a peaceful watch?  
+> Have you had a quiet watch?  
 
 **FRANCISCO**
 
-> Not a sound from anyone.  
+> Not even a mouse is stirring.  
 
 **BERNARDO**
 
 > Well, good night.  
-> If you run into Horatio and Marcellus,  
-> The ones who relieve me, tell them to hurry.  
+> If you happen to see Horatio and Marcellus,  
+> The other guards, tell them to hurry.  
 
 **FRANCISCO**
 
-> I think I hear them. Wait! Who's there?  
+> I think I hear them. Stand, hey! Who's there?  
 > 
 > _Enter HORATIO and MARCELLUS_
 
 **HORATIO**
 
-> We're friends of this place.  
+> Friends of this place.  
 
 **MARCELLUS**
 
@@ -73,8 +75,8 @@ Objective: Translate a selected passage from Shakespeare's 'Hamlet' into modern 
 
 **MARCELLUS**
 
-> Oh, goodbye, honest soldier:  
-> Who has replaced you?  
+> Oh, farewell, honest soldier:  
+> Who has relieved you?  
 
 **FRANCISCO**
 
@@ -85,7 +87,7 @@ Objective: Translate a selected passage from Shakespeare's 'Hamlet' into modern 
 
 **MARCELLUS**
 
-> Hello! Bernardo!  
+> Hey! Bernardo!  
 
 **BERNARDO**
 
@@ -94,7 +96,7 @@ Objective: Translate a selected passage from Shakespeare's 'Hamlet' into modern 
 
 **HORATIO**
 
-> A part of him.  
+> Part of him is here.  
 
 **BERNARDO**
 
@@ -102,7 +104,7 @@ Objective: Translate a selected passage from Shakespeare's 'Hamlet' into modern 
 
 **MARCELLUS**
 
-> Has this thing appeared again tonight?  
+> Has that thing appeared again tonight?  
 
 **BERNARDO**
 
@@ -110,135 +112,130 @@ Objective: Translate a selected passage from Shakespeare's 'Hamlet' into modern 
 
 **MARCELLUS**
 
-Objective: Translate a selected passage from Shakespeare's 'Hamlet' into modern English.
+[Part 2]
 
-> Horatio says it's just our imagination,
-> And he won't let himself believe
-> In this terrifying sight we've seen twice.
-> That's why I've asked him to come with us
-> To watch the events of this night,
-> So that if this ghost appears again,
-> He can confirm what we see and talk to it.
-
-**HORATIO**
-
-> Pff, pff, it won't appear.
-
-**BERNARDO**
-
-> Sit down for a moment;
-> And let us once again tell you our story,
-> Which you are so skeptical about,
-> What we saw on two nights.
+Mae Horatio'n dweud ei fod yn unig yn ein dychymyg,
+Ac ni fydd yn caniatáu i gred gymryd ei gynefin amdano,
+Yn ymwneud â'r olygfa ofnadwy hon, a welwyd gennym ddwywaith:
+Am hynny rwyf wedi gofyn iddo ddechrau ar y daith gyda ni
+I wylio munudau'r nos hon;
+Fel os daw'r ymddangosiad hwn eto,
+Efallai y bydd yn dilysu ein llygaid ac yn siarad ag ef.
 
 **HORATIO**
 
-> Well, let's sit down,
-> And let us hear Bernardo talk about this.
+> Tush, tush, ni fydd yn ymddangos.
 
 **BERNARDO**
 
-> Last night,
-> When that same star in the west
-> Had finished its course to light up that part of the sky
-> Where it now burns, Marcellus and I,
-> When the clock struck one,--
-> 
-> _Enter Ghost_
-
-**MARCELLUS**
-
-> Quiet, stop talking; look, it's coming again!
-
-**BERNARDO**
-
-> In the same form, like the dead king.
-
-**MARCELLUS**
-
-> You're a scholar; speak to it, Horatio.
-
-**BERNARDO**
-
-> Doesn't it look like the king? Look at it, Horatio.
+> Eisteddwch am gyfnod;
+> A gadewch i ni ymosod ar eich clustiau unwaith eto,
+> Sydd mor gadarn yn erbyn ein stori
+> Yr hyn a welsom ni ddwy nos.
 
 **HORATIO**
 
-> Most likely: it terrifies me with fear and wonder.
+> Wel, eisteddwch lawr,
+> A gadewch i ni glywed Bernardo yn siarad am hyn.
 
 **BERNARDO**
 
-> It wants to be spoken to.
+> Y noson ddiwethaf oll,
+> Pan oedd y seren honno yr un a'r gorllewin o'r bôl
+> Wedi gwneud ei daith i oleuo'r rhan honno o'r nef
+> Lle mae'n llosgi nawr, Marcellus a minnau,
+> Y gloch yn taro un,--
 
 **MARCELLUS**
 
-> Question it, Horatio.
+> Heddwch, troi'r cyfeiriad; edrychwch, lle mae'n dod eto!
+
+**BERNARDO**
+
+> Yn y un ffurf, fel y brenin sydd wedi marw.
+
+**MARCELLUS**
+
+> Ti'n ddysgedig; siarad ag ef, Horatio.
+
+**BERNARDO**
+
+> Onid yw'n edrych fel y brenin? nodwch hynny, Horatio.
 
 **HORATIO**
 
-> Who are you that appears at this time of night,
-> In the appearance of the majestic form
-> In which the late king of Denmark used to march?
-> By heaven, I command you, speak!
-
-**MARCELLUS**
-
-> It is offended.
+> Fwyaf tebygol: mae'n fy nychryn â rhyw ofn a rhyfeddod.
 
 **BERNARDO**
 
-> Look, it's walking away!
+> Dylai fod yn cael ei siarad ag ef.
+
+**MARCELLUS**
+
+> Gwestiwn iddo, Horatio.
 
 **HORATIO**
 
-> Wait! Speak, speak! I command you, speak!
-> 
-> _Exit Ghost_
+> Beth wyt ti sy'n cymryd y tro hwn o nos,
+> Gyda'r ffurf deg a brwydrogar honno
+> Ynddi chwysedd angauedig Denmarc,
+> Yn amlwg yn marw? trwy'r nef, rwy'n dy anrhydeddu, siarad!
 
 **MARCELLUS**
 
-> It's gone, and it won't answer.
+> Mae'n ofendidig.
 
 **BERNARDO**
 
-> HORATIO: 
-> Hey Horatio, you're shaking and looking pale. 
-> Isn't this something more than just imagination? 
-> What do you think about it?
+> Gwel
 
-**HORATIO**: 
-> I swear to God, I wouldn't believe this 
-> Without seeing it with my own eyes. 
+[Part 3]
 
-**MARCELLUS**: 
-> Doesn't he look like the king?
+**HORATIO**
 
-**HORATIO**: 
-> Just like you look like yourself. 
-> He's wearing the same armor 
-> That he wore when he fought against Norway; 
-> He frowned like this once before, 
-> When he struck the Polish soldiers on the ice. 
-> It's strange.
+Hey, Horatio! You're shaking and looking pale.  
+Isn't this more than just imagination?  
+What do you think about it?
 
-**MARCELLUS**: 
-> This has happened twice before, at this same hour, 
-> He's walked by our guard with a military stride.
+**HORATIO**
 
-**HORATIO**: 
-> I don't know what he's thinking specifically, 
-> But overall, in my opinion, 
-> This is a sign of some strange disruption in our state.
+I swear to God, I wouldn't believe this  
+Without seeing it with my own eyes.
 
-**MARCELLUS**: 
-> Come on, sit down and tell me, you who knows, 
-> Why this strict and vigilant watch 
-> Works tirelessly every night for the sake of the kingdom, 
-> And why there are daily inspections of weapons, 
-> And a constant flow of foreign supplies for war. 
-> Why there are so many shipbuilders, 
-> Who don't even take Sundays off from their hard work. 
-> What's going on, that this sweaty haste 
-> Makes the night work as hard as the day? 
-> Who can tell me?
+**MARCELLUS**
+
+Doesn't it look like the king?
+
+**HORATIO**
+
+Just as much as you look like yourself.  
+He was wearing the exact armor  
+When he fought against ambitious Norway.  
+He had the same fierce expression  
+When he angrily fought against the Poles on the ice.  
+It's strange.
+
+**MARCELLUS**
+
+Twice before, at this exact hour,  
+He has passed by us with a military stride.
+
+**HORATIO**
+
+I don't know exactly what he's planning,  
+But based on my overall understanding,  
+This foretells some strange disaster for our country.
+
+**MARCELLUS**
+
+Come on, sit down and tell me, whoever knows,  
+Why this strict and observant watch  
+Works tirelessly every night,  
+And why there are so many cannons being cast,  
+And why there is such a demand for war materials,  
+And why there are so many shipwrights working,  
+Not even taking Sundays off.  
+What could be happening that requires this frantic rush  
+To make day and night work together?  
+Who can give me some information?
 
