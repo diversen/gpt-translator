@@ -1,6 +1,5 @@
 import re
 import os
-import json
 import tiktoken
 import logging
 
@@ -75,10 +74,9 @@ def _expand_paragraphs(paragraphs, max_tokens_paragraph):
 
 
 def file_put_paragraphs(filename, paragraphs):
-
     if os.path.exists(filename):
         os.remove(filename)
-    
+
     for paragraph in paragraphs:
         paragraph_dict = dict(paragraph)
         with open(filename, "a") as file:

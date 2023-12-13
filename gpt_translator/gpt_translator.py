@@ -117,7 +117,7 @@ class GPTTranslator:
                 self.db.update_paragraph_translation(idx, content)
                 logger.info(f"(Total tokens used: {self.total_tokens})")
 
-        self.export()
+                self.export()
 
     def translate_idxs(self, idxs):
         """
@@ -133,7 +133,7 @@ class GPTTranslator:
             self.db.update_paragraph_translation(idx, content)
             logger.info(f"(Total tokens used: {self.total_tokens})")
 
-        self.export()
+            self.export()
 
     def export(self):
         """

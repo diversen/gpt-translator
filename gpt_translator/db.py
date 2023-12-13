@@ -1,8 +1,8 @@
 import sqlite3
 import os
 
-class DB:
 
+class DB:
     def __init__(self, working_dir):
         # create database if it doesn't exist
         self.db = sqlite3.connect(os.path.join(working_dir, "translation.db"))
@@ -33,7 +33,7 @@ class DB:
         )
         total = cursor.fetchone()[0]
         return total > 0
-    
+
     def get_paragraph(self, idx):
         cursor = self.db.execute(
             """
@@ -54,7 +54,6 @@ class DB:
         return total > 0
 
     def insert_paragraph(self, idx, paragraph):
-
         # check it row already exists
         if self.idx_exists(idx):
             return
@@ -78,7 +77,7 @@ class DB:
             (translated, idx),
         )
         self.db.commit()
-        
+
     def get_count_paragraphs(self):
         """
         Get total count of paragraphs
@@ -90,7 +89,7 @@ class DB:
         )
         total = cursor.fetchone()[0]
         return total
-    
+
     def all_translated(self):
         """
         Check if all paragraphs have been translated
@@ -102,7 +101,7 @@ class DB:
         )
         total = cursor.fetchone()[0]
         return total == self.get_count_paragraphs()
-    
+
     def get_idxs(self):
         """
         Get all indexes
@@ -113,9 +112,8 @@ class DB:
             """
         )
         return [idx[0] for idx in cursor.fetchall()]
-    
-    def get_all_rows(self) -> list:
 
+    def get_all_rows(self) -> list:
         # set connection to associate rows with columns
         self.db.row_factory = sqlite3.Row
         """
@@ -126,7 +124,6 @@ class DB:
             SELECT * FROM paragraphs
             """
         )
-        
+
         rows = [dict(row) for row in cursor.fetchall()]
         return rows
-        

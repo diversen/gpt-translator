@@ -9,9 +9,11 @@ import os
 # set logging level
 logging.basicConfig(level=logging.INFO)
 
+
 @click.group()
 def cli():
     pass
+
 
 @click.command()
 @click.option('-f', '--from-file', help='Source file for translation.', required=True)
@@ -25,7 +27,7 @@ def cli():
 @click.option('--top-p', default=0.99, help='Top P. Default is 0.99')
 @click.option('--model', default='gpt-3.5-turbo', help='Model to use. Default is gpt-3.5-turbo')
 def translate(from_file, prompt, idxs, working_dir, failure_sleep, temperature, presence_penalty, top_p, max_tokens, model):
-    
+
     translator = GPTTranslator(
         from_file=from_file,
         prompt=prompt,
@@ -43,7 +45,9 @@ def translate(from_file, prompt, idxs, working_dir, failure_sleep, temperature, 
     else:
         translator.translate()
 
+
 cli.add_command(translate)
+
 
 @click.command()
 @click.option('-d', '--working-dir', default='output', help='Working directory. Default is output')
@@ -51,12 +55,15 @@ def cleanup(working_dir):
     if os.path.exists(working_dir):
         file_utils.cleanup(working_dir)
 
+
 cli.add_command(cleanup)
+
 
 @click.command()
 def version():
     print(__version__)
     exit(0)
+
 
 cli.add_command(version)
 
