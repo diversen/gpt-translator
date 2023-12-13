@@ -21,6 +21,7 @@ gpt_translate = GPTTranslator(
     working_dir="./output",
     model="gpt-3.5-turbo",
     max_tokens=512,
+    part_separator=True,
 )
 
 gpt_translate.translate()
