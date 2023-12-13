@@ -102,6 +102,7 @@ class GPTTranslator:
     def translate(self):
         if self.db.all_translated():
             logger.info("All paragraphs have been translated.")
+            self.export()
 
         else:
             total = self.db.get_count_paragraphs()
@@ -110,14 +111,13 @@ class GPTTranslator:
             for idx in idxs:
                 if self.db.idx_is_translated(idx):
                     logger.info(f"Paragraph {idx} has already been translated.")
-                    continue
+                else:
+                    logging.info(f"Translating paragraph {idx} of {total}")
+                    content = self._translate_single_paragraph(idx)
+                    self.db.update_paragraph_translation(idx, content)
+                    logger.info(f"(Total tokens used: {self.total_tokens})")
 
-                logging.info(f"Translating paragraph {idx} of {total}")
-                content = self._translate_single_paragraph(idx)
-                self.db.update_paragraph_translation(idx, content)
-                logger.info(f"(Total tokens used: {self.total_tokens})")
-
-                self.export()
+                    self.export()
 
     def translate_idxs(self, idxs):
         """
@@ -126,14 +126,13 @@ class GPTTranslator:
         for idx in idxs:
             if not self.db.idx_exists(idx):
                 logger.error(f"Paragraph {idx} does not exist.")
-                continue
+            else:
+                logging.info(f"Translating paragraph {idx}")
+                content = self._translate_single_paragraph(idx)
+                self.db.update_paragraph_translation(idx, content)
+                logger.info(f"(Total tokens used: {self.total_tokens})")
 
-            logging.info(f"Translating paragraph {idx}")
-            content = self._translate_single_paragraph(idx)
-            self.db.update_paragraph_translation(idx, content)
-            logger.info(f"(Total tokens used: {self.total_tokens})")
-
-            self.export()
+                self.export()
 
     def export(self):
         """
@@ -153,4 +152,5 @@ class GPTTranslator:
         filename = os.path.join(self.working_dir, filename)
 
         paragraphs = self.db.get_all_rows()
+
         file_utils.file_put_paragraphs(filename, paragraphs)

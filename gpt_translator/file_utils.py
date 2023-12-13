@@ -78,9 +78,9 @@ def file_put_paragraphs(filename, paragraphs):
         os.remove(filename)
 
     for paragraph in paragraphs:
-        paragraph_dict = dict(paragraph)
         with open(filename, "a") as file:
-            file.write(paragraph_dict["translated"] + "\n\n")
+            if paragraph["translated"]:
+                file.write(paragraph["translated"] + "\n\n")
 
 
 def cleanup(directory):
