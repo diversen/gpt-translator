@@ -1,0 +1,18 @@
+[tool.black]
+line-length = 140
+
+[tool.mypy]
+exclude = [ "venv",]
+
+[tool.bump_version]
+version_file = "gpt_translator/__init__.py"
+
+[tool.bump_version.replace_patterns.pip]
+file = "README.md"
+search = "<!-- LATEST-VERSION-PIPX -->"
+replace = "\tpip install git+https://github.com/diversen/gpt-translator@{version}\n"
+
+[tool.bump_version.replace_patterns.pipx]
+file = "README.md"
+search = "<!-- LATEST-VERSION-PIPX -->"
+replace = "\tpipx install git+https://github.com/diversen/gpt-translator@{version}\n"

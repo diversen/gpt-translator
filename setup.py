@@ -1,19 +1,13 @@
 from setuptools import setup, find_packages  # type: ignore
+from gpt_translator import __version__ as version
 
 
 REQUIREMENTS = [i.strip() for i in open("requirements.txt").readlines()]
 
-# get version from module
-VERSION = ""
-with open("gpt_translator/__init__.py", "r") as fh:
-    for line in fh.readlines():
-        if line.startswith("__version__"):
-            VERSION = line.split("=")[1].strip().replace('"', "")
-            break
 
 setup(
     name="gpt-translator",
-    version=VERSION,
+    version=version,
     description="Translate documents using GPT",
     url="https://github.com/diversen/gpt-translator",
     author="Dennis Iversen",
